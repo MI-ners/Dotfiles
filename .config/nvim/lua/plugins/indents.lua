@@ -4,4 +4,7 @@ vim.pack.add({
 
 ---@module "ibl"
 ---@type ibl.config
-require("ibl").setup()
+require("ibl").setup({
+exclude = { filetypes = {"dashboard"} }
+
+})

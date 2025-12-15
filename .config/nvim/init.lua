@@ -10,6 +10,7 @@ require("plugins.indents")
 require("plugins.fugutive")
 require("plugins.showkeys")
 require("plugins.tmuxNav")
+require("plugins.dashboard")
 
 --Vim stuff
 require("vimOpts")
