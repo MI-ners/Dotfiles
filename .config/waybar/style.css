@@ -48,6 +48,7 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
+#power-profiles-daemon,
 #pulseaudio,
 #clock,
 #custom-sep,
@@ -99,6 +100,12 @@ button:hover {
     color: @mag;
     border-bottom: 4px solid @mag;
 }
+
+#power-profiles-daemon {
+    color: @cyn;
+    border-bottom: 4px solid @cyn;
+}
+
 
 #network.disconnected {
     background-color: @red;
