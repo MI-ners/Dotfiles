@@ -123,9 +123,9 @@
     "tooltip": true,
     "format-icons": {
       "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
+      "performance": "P",
+      "balanced": "B",
+      "power-saver": "S"
     }
   },
 }
