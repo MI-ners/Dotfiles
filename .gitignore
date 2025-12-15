@@ -1,0 +1,7 @@
+# Ignore the .git directory itself
+.git/
+
+# Ignore files created by text editors, etc.
+*~
+*.swp
+*.bak
