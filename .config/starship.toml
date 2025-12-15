@@ -42,17 +42,11 @@ format = "on [$symbol$branch]($style) "
 [git_status]
 style = "bold #ff757f" # Pink
 format = "[$all_status$ahead_behind]($style) "
-# The icons below are guaranteed to exist in your font
-conflicted = " "
-ahead = " "
-behind = " "
-diverged = " "
-untracked = " "
-modified = " "
-staged = " "
-renamed = " "
-deleted = " "
-stashed = " "
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
 [cmd_duration]
 min_time = 2000
