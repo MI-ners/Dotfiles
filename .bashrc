@@ -1,6 +1,6 @@
 if [[ $- != *i* ]] ; then
-	# Shell is non-interactive.  Be done now!
-	return
+  # Shell is non-interactive.  Be done now!
+  return
 fi
 
 eval "$(starship init bash)"
@@ -8,10 +8,10 @@ eval "$(starship init bash)"
 
 # Put your fun stuff here.
 if [[ ${BLE_VERSION-} ]]; then
-				# 'always' = always collapse the prompt
-				bleopt prompt_ps1_transient=always
-				bleopt prompt_ps1_final='$(starship module character)'
-				ble-attach
+  # 'always' = always collapse the prompt
+  bleopt prompt_ps1_transient=always
+  bleopt prompt_ps1_final='$(starship module character)'
+  ble-attach
 fi
 
 PATH="$PATH:/home/miners/.local/bin"
@@ -30,15 +30,15 @@ export PATH="$PATH:$GOPATH/bin"
 
 # yazi
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # Aliases
-alias reboot='sudo reboot --noconfirm'
+alias reboot='sudo reboot'
 
 
 

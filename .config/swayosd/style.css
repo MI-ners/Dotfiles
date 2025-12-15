@@ -1,0 +1,26 @@
+/* Container Window */
+window#osd {
+    padding: 12px 20px;
+    border-radius: 99px;
+    background-color: rgba(15, 11, 24, 0.95); /* Void Purple */
+    border: 2px solid #bd5eff; /* Violet Border */
+}
+
+/* The Background Track */
+trough {
+    background-color: #26233a; /* Dark Grey/Purple */
+    border-radius: 99px;
+    min-height: 10px;
+}
+
+/* The Volume Level (Fill) */
+highlight, progress {
+    background-color: #bd5eff; /* Electric Violet */
+    border-radius: 99px;
+    box-shadow: 0 0 10px #bd5eff; /* Neon Glow */
+}
+
+/* Icons/Label */
+label, image {
+    color: #dcd7ea; /* Lavender */
+}
