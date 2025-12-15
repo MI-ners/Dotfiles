@@ -1,14 +1,15 @@
 vim.g.mapleader = " "
 
 --Plugins require("plugins.treesitter")
+require("plugins.lspStuff")
 require("plugins.telescope")
 require("plugins.colorscheme")
 require("plugins.lualine")
-require("plugins.lspStuff")
 require("plugins.nvimCmp")
 require("plugins.indents")
 require("plugins.fugutive")
 require("plugins.showkeys")
+require("plugins.tmuxNav")
 
 --Vim stuff
 require("vimOpts")

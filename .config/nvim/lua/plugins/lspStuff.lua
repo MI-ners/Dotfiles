@@ -21,12 +21,7 @@ require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "gopls" },
 })
 
-local on_attach = function (client, bufnr)
-  vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
-end
-
 vim.lsp.config("lua_ls", {
-    on_attach = on_attach,
     settings = {
         Lua = {
             workspace = {
@@ -45,5 +40,3 @@ vim.lsp.config("lua_ls", {
         },
     },
 })
-
-vim.lsp.enable({ "lua_ls" })
