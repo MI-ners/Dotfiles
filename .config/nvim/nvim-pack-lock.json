@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "calendar-vim": {
+      "rev": "a7e73e02c92566bf427b2a1d6a61a8f23542cc21",
+      "src": "https://github.com/renerocksai/calendar-vim"
+    },
     "cmp-buffer": {
       "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "https://github.com/hrsh7th/cmp-buffer"
@@ -21,6 +25,10 @@
       "src": "https://github.com/j-hui/fidget.nvim",
       "version": "'*'"
     },
+    "img-clip.nvim": {
+      "rev": "93fcf50924108262caec66b900077987dfcb7c7f",
+      "src": "https://github.com/HakonHarnes/img-clip.nvim"
+    },
     "indent-blankline.nvim": {
       "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim",
@@ -29,6 +37,10 @@
     "lualine.nvim": {
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "markdown-preview.nvim": {
+      "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
+      "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "c55bd8a8fb191e24176c206a7af1dd51ce7276a5",
@@ -52,8 +64,7 @@
     },
     "nvim-treesitter": {
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
-      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
-      "version": "'master'"
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-web-devicons": {
       "rev": "8dcb311b0c92d460fac00eac706abd43d94d68af",
@@ -67,9 +78,17 @@
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "render-markdown.nvim": {
+      "rev": "686af1e08c47a72e1f969ba2b40a424446d882cf",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "showkeys": {
       "rev": "cb0a50296f11f1e585acffba8c253b9e8afc1f84",
       "src": "https://github.com/nvzone/showkeys"
+    },
+    "telekasten.nvim": {
+      "rev": "b4672bacb9ab08a48a696d41f0a2f107d3d2ede3",
+      "src": "https://github.com/renerocksai/telekasten.nvim"
     },
     "telescope.nvim": {
       "rev": "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2",
@@ -83,6 +102,10 @@
     "vim-tmux-navigator": {
       "rev": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a",
       "src": "https://github.com/christoomey/vim-tmux-navigator"
+    },
+    "which-key.nvim": {
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
+      "src": "https://github.com/folke/which-key.nvim"
     }
   }
 }

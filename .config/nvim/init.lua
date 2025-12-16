@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 
---Plugins require("plugins.treesitter")
+--Plugins 
 require("plugins.lspStuff")
+require("plugins.treesitter")
 require("plugins.telescope")
 require("plugins.colorscheme")
 require("plugins.lualine")
@@ -11,6 +12,8 @@ require("plugins.fugutive")
 require("plugins.showkeys")
 require("plugins.tmuxNav")
 require("plugins.dashboard")
+require("plugins.notes")
+require("plugins.whichkey")
 
 --Vim stuff
 require("vimOpts")
@@ -30,6 +33,30 @@ vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
     vim.keymap.set({'n', 'v'}, 'gra', vim.lsp.buf.code_action, {buffer=ev.buf, desc = "Code actions"})
+  end
+})
+
+local notes_group = vim.api.nvim_create_augroup("NotesSync", { clear = true })
+local notes_path = vim.fn.expand("~/zettelkasten")
+
+-- Auto-sync with git 
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = notes_path .. "/*.md",
+  group = notes_group,
+  callback = function()
+    -- Run git commands asynchronously to avoid freezing the editor
+    vim.fn.jobstart({ "git", "-C", notes_path, "add", "." }, {
+      on_exit = function()
+        vim.fn.jobstart({ "git", "-C", notes_path, "commit", "-m", "Auto-sync: " .. os.date() }, {
+          on_exit = function()
+            -- Push silently
+            vim.fn.jobstart({ "git", "-C", notes_path, "push" })
+          end
+        })
+      end
+    })
+    print("Notes Synced to Git!")
   end,
 })
 
+vim.treesitter.language.register("markdown", "telekasten")
