@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end
 })
 
+--notes stuff
 local notes_group = vim.api.nvim_create_augroup("NotesSync", { clear = true })
 local notes_path = vim.fn.expand("~/zettelkasten")
 
@@ -59,4 +60,3 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
-vim.treesitter.language.register("markdown", "telekasten")

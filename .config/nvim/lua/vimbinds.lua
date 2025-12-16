@@ -22,3 +22,13 @@ vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references " }
 
 --show full diagnostic
 vim.keymap.set("n", "<leader>E", vim.diagnostic.open_float, { desc = "View Error" })
+
+--notes
+vim.keymap.set("n", "<leader>zc", ":Telekasten show_calendar<CR>", { desc = "Calendar" })
+vim.keymap.set("n", "<leader>zn", ":Telekasten new_note<CR>", { desc = "New Note" })
+vim.keymap.set("n", "<leader>zf", ":Telekasten find_notes<CR>", { desc = "Find Note" })
+vim.keymap.set("n", "<leader>zz", ":Telekasten follow_link<CR>", { desc = "Follow Link" })
+vim.keymap.set("n", "<leader>p", ":PasteImage<cr>", { desc = "Paste Image" })
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>", { desc = "Preview Markdown" })
+
+

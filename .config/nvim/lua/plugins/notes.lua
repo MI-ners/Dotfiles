@@ -1,5 +1,13 @@
-vim.opt.conceallevel = 2
 vim.opt.termguicolors = true
+vim.g.mkdp_filetypes = { "markdown", "telekasten" }
+vim.g.mkdp_echo_preview_url = 1
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "markdown", "telekasten" },
+    callback = function()
+        vim.opt_local.conceallevel = 2
+    end,
+})
 
 vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
@@ -11,7 +19,6 @@ vim.pack.add({
 	{ src = "https://github.com/iamcco/markdown-preview.nvim" },
 })
 
--- 3. FORCE START TREESITTER (The Visual Engine)
 local ts_config = require("nvim-treesitter.configs")
 ts_config.setup({
 	ensure_installed = { "markdown", "markdown_inline" },
@@ -47,9 +54,8 @@ require("telekasten").setup({
 	},
 })
 
-local map = vim.keymap.set
-map("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>", { desc = "Calendar" })
-map("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", { desc = "New Note" })
-map("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", { desc = "Find Note" })
-map("n", "<leader>zz", "<cmd>Telekasten follow_link<CR>", { desc = "Follow Link" })
-map("n", "<leader>p", "<cmd>PasteImage<cr>", { desc = "Paste Image" })
+vim.cmd("packadd markdown-preview.nvim")
+vim.g.mkdp_browser = 'app.zen_browser.zen'
+vim.g.mkdp_echo_preview_url = 1
+vim.g.mkdp_browser = 'xdg-open'
+

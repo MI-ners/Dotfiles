@@ -1,5 +1,4 @@
 -- Vim opts
-
 vim.o.shiftwidth = 2
 vim.o.expandtab = false
 vim.o.smartindent = true
@@ -18,7 +17,6 @@ vim.o.ignorecase = true
 vim.o.incsearch = true
 vim.o.undofile = true
 vim.o.winborder = "rounded"
-vim.opt.conceallevel = 2
 
 -- Vim diagnosis
 vim.diagnostic.config({

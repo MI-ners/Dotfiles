@@ -5,9 +5,7 @@ vim.pack.add({
 	{ src = "https://github.com/hrsh7th/cmp-path" },
 })
 
--- Configure nvim-cmp
 local cmp = require("cmp")
-
 cmp.setup({
 	completion = {
 		completeopt = "menu,menuone,noinsert,noselect",
@@ -31,7 +29,7 @@ cmp.setup({
 		["<Up>"] = cmp.mapping.select_prev_item(),
 	}),
 	window = {
-		completion = cmp.config.window.bordered(), -- Adds borders to the suggestion list
-		documentation = cmp.config.window.bordered(), -- Adds borders to the documentation window
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 })

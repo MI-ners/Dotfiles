@@ -8,6 +8,8 @@
   "modules-left": [
     "hyprland/workspaces",
     "custom/sep",
+    "idle_inhibitor",
+    "custom/sep",
     "clock",
     "custom/sep",
     "pulseaudio",
@@ -18,7 +20,6 @@
   "modules-center": [
     "custom/gentoo"
   ],
-
   "modules-right": [
     "custom/sep",
     "cpu",
@@ -35,7 +36,13 @@
     "battery"
   ],
 
-  // Modules configuration
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "+",
+      "deactivated": "-"
+    }
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
