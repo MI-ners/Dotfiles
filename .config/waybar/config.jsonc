@@ -39,8 +39,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "+",
-      "deactivated": "-"
+      "activated": "1",
+      "deactivated": "0"
     }
   },
   "hyprland/workspaces": {
@@ -53,7 +53,7 @@
     }
   },
   "hyprland/window" : {
-    "max-length": 35,
+    "max-length": 25,
     "seperate-outputs": false
   },
   "tray": {

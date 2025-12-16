@@ -3,10 +3,10 @@ vim.g.mkdp_filetypes = { "markdown", "telekasten" }
 vim.g.mkdp_echo_preview_url = 1
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "telekasten" },
-    callback = function()
-        vim.opt_local.conceallevel = 2
-    end,
+	pattern = { "markdown", "telekasten" },
+	callback = function()
+		vim.opt_local.conceallevel = 2
+	end,
 })
 
 vim.pack.add({
@@ -46,6 +46,7 @@ require("telekasten").setup({
 	templates = "templates",
 	image_subdir = "img",
 	extension = ".md",
+	template_new_daily = vim.fn.expand("~/zettelkasten/templates/daily.md"),
 	plug_into_calendar = true,
 	calendar_opts = {
 		weeknm = 4,
@@ -55,7 +56,6 @@ require("telekasten").setup({
 })
 
 vim.cmd("packadd markdown-preview.nvim")
-vim.g.mkdp_browser = 'app.zen_browser.zen'
+vim.g.mkdp_browser = "app.zen_browser.zen"
 vim.g.mkdp_echo_preview_url = 1
-vim.g.mkdp_browser = 'xdg-open'
-
+vim.g.mkdp_browser = "xdg-open"
