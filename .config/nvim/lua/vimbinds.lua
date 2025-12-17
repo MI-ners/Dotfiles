@@ -31,4 +31,6 @@ vim.keymap.set("n", "<leader>zz", ":Telekasten follow_link<CR>", { desc = "Follo
 vim.keymap.set("n", "<leader>p", ":PasteImage<cr>", { desc = "Paste Image" })
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>", { desc = "Preview Markdown" })
 
+-- tells vim to shut up // when searching to be exact
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 

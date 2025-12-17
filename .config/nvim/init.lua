@@ -8,7 +8,7 @@ require("plugins.colorscheme")
 require("plugins.lualine")
 require("plugins.nvimCmp")
 require("plugins.indents")
-require("plugins.fugutive")
+require("plugins.misc")
 require("plugins.showkeys")
 require("plugins.tmuxNav")
 require("plugins.dashboard")
@@ -58,3 +58,5 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		print("Notes Synced to Git!")
 	end,
 })
+
+
