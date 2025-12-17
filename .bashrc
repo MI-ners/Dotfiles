@@ -8,7 +8,6 @@ eval "$(starship init bash)"
 
 # Put your fun stuff here.
 if [[ ${BLE_VERSION-} ]]; then
-  # 'always' = always collapse the prompt
   bleopt prompt_ps1_transient=always
   bleopt prompt_ps1_final='$(starship module character)'
   ble-attach
@@ -27,6 +26,8 @@ export PATH=$PATH:$HOME/.spicetify
 
 export GOPATH="$HOME/dev/env/go"
 export PATH="$PATH:$GOPATH/bin"
+
+export PATH="$PATH:$HOME/.config/emacs/bin"
 
 # yazi
 function y() {

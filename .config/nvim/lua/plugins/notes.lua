@@ -59,3 +59,30 @@ vim.cmd("packadd markdown-preview.nvim")
 vim.g.mkdp_browser = "app.zen_browser.zen"
 vim.g.mkdp_echo_preview_url = 1
 vim.g.mkdp_browser = "xdg-open"
+
+local function filter_diagnostics(err, result, ctx, config)
+    if not result or not result.diagnostics then
+        return
+    end
+
+    local filtered_diagnostics = {}
+    for _, diagnostic in ipairs(result.diagnostics) do
+        local message = diagnostic.message or ""
+        
+        local is_link_error = message:match("Link to non%-existent document")
+        
+        local is_asset = message:match("%.pdf") or 
+                         message:match("%.png") or 
+                         message:match("%.jpg") or 
+                         message:match("%.jpeg")
+
+        if not (is_link_error and is_asset) then
+            table.insert(filtered_diagnostics, diagnostic)
+        end
+    end
+
+    result.diagnostics = filtered_diagnostics
+    vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+end
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = filter_diagnostics
