@@ -14,6 +14,7 @@ require("plugins.tmuxNav")
 require("plugins.dashboard")
 require("plugins.notes")
 require("plugins.whichkey")
+require("plugins.oil")
 
 --Vim stuff
 require("vimOpts")

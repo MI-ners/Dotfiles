@@ -1,5 +1,6 @@
 -- Vim vanilla keymaps
-vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "Explorer" })
+--vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "Explorer" })
+vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Oil/Explorer" })
 vim.keymap.set("n", "<leader>w", ":write<CR>", { desc = "Write file" })
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 
