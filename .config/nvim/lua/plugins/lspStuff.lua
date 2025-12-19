@@ -18,7 +18,7 @@ require("mason").setup({
 
 --Mason lsp config
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "gopls", "marksman", "pyright"},
+  ensure_installed = { "lua_ls", "gopls", "marksman", "pyright", "clangd"},
 })
 
 vim.lsp.config("lua_ls", {

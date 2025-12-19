@@ -27,6 +27,9 @@ export PATH=$PATH:$HOME/.spicetify
 export GOPATH="$HOME/dev/env/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# doom
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
 # yazi
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

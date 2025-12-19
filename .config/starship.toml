@@ -1,6 +1,7 @@
 add_newline = false
 # A global format to keep things tight
 format = """
+$username\
 $os\
 $directory\
 $git_branch\
@@ -21,7 +22,13 @@ $cmd_duration\
 $line_break\
 $character"""
 
-# -- Core UI --
+[username]
+style_user = "bold #ff757f"
+style_root = "bold #ff757f"
+format = '[$user]($style)[@](bold #f1fa8c)' 
+disabled = false
+show_always = true
+
 [character]
 success_symbol = "[➜](bold #50fa7b)" # Green for success
 error_symbol = "[➜](bold #ff6e6e)"   # Red for error
