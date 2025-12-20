@@ -9,22 +9,16 @@ configuration {
     font: "JetBrainsMono Nerd Font Bold 14";
 }
 
-/* -- THE VOID PALETTE -- */
 * {
-    /* Deep Void with Transparency (AA = ~66%) */
-    bg-col:  #0f0b18aa;
-    /* Solid Void for Input Bar */
-    bg-col-light: #1a1628;
-    /* The Glow */
-    border-col: #bd5eff;
-    /* The Selection Gradient (Simulated via solid for Rofi limitations) */
-    selected-col: #bd5eff;
-    /* Text Colors */
-    fg-col: #dcd7ea;
-    fg-col2: #0f0b18; /* Text inside selection */
-    grey: #444b6a;
+	bg-col:  #0f0b18aa;
+	bg-col-light: #1a1628;
+	border-col: #bd5eff;
+	selected-col: #bd5eff;
+	fg-col: #dcd7ea;
+	fg-col2: #0f0b18;
+	grey: #444b6a;
 
-    width: 600;
+	width: 600;
 }
 
 element-text, element-icon , mode-switcher {
