@@ -1,5 +1,16 @@
 vim.g.mapleader = " "
 
+-- init the notes before anything else!
+vim.g.vimwiki_list = {
+	{
+		path = "~/vimwiki/",
+		syntax = "markdown",
+		ext = ".md",
+	},
+}
+vim.g.vimwiki_global_ext = 0
+vim.g.vimwiki_markdown_link_ext = 1
+
 --Plugins
 require("plugins.lspStuff")
 require("plugins.treesitter")
@@ -36,28 +47,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set({ "n", "v" }, "gra", vim.lsp.buf.code_action, { buffer = ev.buf, desc = "Code actions" })
 	end,
 })
-
---notes stuff
-local notes_group = vim.api.nvim_create_augroup("NotesSync", { clear = true })
-local notes_path = vim.fn.expand("~/vimwiki/")
-
--- Auto-sync with git -- notes
-vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = notes_path .. "/*.wiki",
-	group = notes_group,
-	callback = function()
-		vim.fn.jobstart({ "git", "-C", notes_path, "add", "." }, {
-			on_exit = function()
-				vim.fn.jobstart({ "git", "-C", notes_path, "commit", "-m", "Auto-sync: " .. os.date() }, {
-					on_exit = function()
-						-- Push silently
-						vim.fn.jobstart({ "git", "-C", notes_path, "push" })
-					end,
-				})
-			end,
-		})
-		print("Notes Synced to Git!")
-	end,
-})
-
 
