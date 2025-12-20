@@ -39,11 +39,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 --notes stuff
 local notes_group = vim.api.nvim_create_augroup("NotesSync", { clear = true })
-local notes_path = vim.fn.expand("~/zettelkasten")
+local notes_path = vim.fn.expand("~/vimwiki/")
 
 -- Auto-sync with git -- notes
 vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = notes_path .. "/*.md",
+	pattern = notes_path .. "/*.wiki",
 	group = notes_group,
 	callback = function()
 		vim.fn.jobstart({ "git", "-C", notes_path, "add", "." }, {
