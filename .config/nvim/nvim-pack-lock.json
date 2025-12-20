@@ -73,7 +73,8 @@
     },
     "nvim-treesitter": {
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
-      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'master'"
     },
     "nvim-web-devicons": {
       "rev": "8dcb311b0c92d460fac00eac706abd43d94d68af",
@@ -115,6 +116,10 @@
     "vim-tmux-navigator": {
       "rev": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a",
       "src": "https://github.com/christoomey/vim-tmux-navigator"
+    },
+    "vimwiki": {
+      "rev": "72792615e739d0eb54a9c8f7e0a46a6e2407c9e8",
+      "src": "https://github.com/vimwiki/vimwiki"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",

@@ -12,9 +12,9 @@ require("plugins.misc")
 require("plugins.showkeys")
 require("plugins.tmuxNav")
 require("plugins.dashboard")
-require("plugins.notes")
 require("plugins.whichkey")
 require("plugins.oil")
+require("plugins.vimWiki")
 
 --Vim stuff
 require("vimOpts")

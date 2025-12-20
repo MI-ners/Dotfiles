@@ -1,7 +1,7 @@
 -- Vim opts
-vim.opt.tabstop = 2      
-vim.opt.shiftwidth = 2   
-vim.opt.softtabstop = 2  
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 vim.o.expandtab = false
 vim.o.smartindent = true
 vim.o.autoindent = true
@@ -22,14 +22,13 @@ vim.o.winborder = "rounded"
 
 -- Vim diagnosis
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●',
-    format = function(diagnostic)
-      if #diagnostic.message > 50 then
-        return string.sub(diagnostic.message, 1, 50) .. "..."
-      end
-      return diagnostic.message
-    end,
-  },
+	virtual_text = {
+		prefix = "●",
+		format = function(diagnostic)
+			if #diagnostic.message > 50 then
+				return string.sub(diagnostic.message, 1, 50) .. "..."
+			end
+			return diagnostic.message
+		end,
+	},
 })
-

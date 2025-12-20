@@ -24,7 +24,10 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH=$PATH:/home/miners/.spicetify
 export PATH=$PATH:$HOME/.spicetify
 
+# go 
 export GOPATH="$HOME/dev/env/go"
+# tiny go 
+export PATH=$PATH:/usr/local/tinygo/bin
 export PATH="$PATH:$GOPATH/bin"
 
 # doom
@@ -42,6 +45,11 @@ function y() {
 # Aliases
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown now'
+alias ls='eza -l'
+alias lsa='eza -a -l --no-symlinks'
+alias ..='cd ..'
 
+#for esp32
+alias tflash='/usr/local/tinygo/bin/tinygo flash -x -target=esp32-coreboard-v2 -port=/dev/ttyUSB0'
 
 
