@@ -26,6 +26,7 @@ require("plugins.dashboard")
 require("plugins.whichkey")
 require("plugins.oil")
 require("plugins.vimWiki")
+require("plugins.tinygo")
 
 --Vim stuff
 require("vimOpts")

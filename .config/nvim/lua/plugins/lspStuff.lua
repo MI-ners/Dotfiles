@@ -42,5 +42,10 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("marksman", {
-  filetypes = { "markdown", "markdown.mdx", "telekasten" },
+  filetypes = { "markdown", "wiki"},
+})
+
+
+vim.lsp.config("grammarly-languageserver", {
+    filetypes = { "markdown", "text" },
 })

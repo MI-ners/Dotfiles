@@ -27,3 +27,7 @@ vim.keymap.set("n", "<leader>E", vim.diagnostic.open_float, { desc = "View Error
 
 -- tells vim to shut up // when searching to be exact
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- vimWiki previews
+vim.keymap.set("n", "<leader>wp", ":LivePreview start<CR>", { desc = "Preview Current Markdown" })
+

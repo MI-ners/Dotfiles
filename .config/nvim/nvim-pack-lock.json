@@ -38,6 +38,10 @@
       "rev": "5231c62aa83c2f8dc8e7ba957aa77098cda1257d",
       "src": "https://github.com/folke/lazydev.nvim"
     },
+    "live-preview.nvim": {
+      "rev": "3e0eb9ea48a6cf8b091c0031830721eeff0efe19",
+      "src": "https://github.com/brianhuster/live-preview.nvim"
+    },
     "lualine.nvim": {
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
@@ -112,6 +116,10 @@
       "rev": "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2",
       "src": "https://github.com/nvim-telescope/telescope.nvim",
       "version": "2.0.0 - 2.1.0"
+    },
+    "tinygo.nvim": {
+      "rev": "0f38894d50ad5a02aae8f3df14a24576acc304f1",
+      "src": "https://github.com/pcolladosoto/tinygo.nvim"
     },
     "vim-fugitive": {
       "rev": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
