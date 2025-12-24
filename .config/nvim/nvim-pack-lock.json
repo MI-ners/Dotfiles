@@ -25,6 +25,11 @@
       "src": "https://github.com/j-hui/fidget.nvim",
       "version": "'*'"
     },
+    "harpoon": {
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
     "img-clip.nvim": {
       "rev": "93fcf50924108262caec66b900077987dfcb7c7f",
       "src": "https://github.com/HakonHarnes/img-clip.nvim"

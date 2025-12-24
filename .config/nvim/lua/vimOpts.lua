@@ -1,8 +1,8 @@
 -- Vim opts
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.o.expandtab = false
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
 vim.o.cindent = true
@@ -31,4 +31,14 @@ vim.diagnostic.config({
 			return diagnostic.message
 		end,
 	},
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "go",
+    group = indent_group,
+    callback = function()
+        vim.opt_local.expandtab = false -- Use real tabs
+        vim.opt_local.tabstop = 4       -- Visual width of tab
+        vim.opt_local.shiftwidth = 4    -- Indent width
+    end,
 })

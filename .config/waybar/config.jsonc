@@ -122,7 +122,8 @@
   "custom/gentoo": {
     "format" : "  ",
     "interval" : 0,
-    "tooltip-format": "I use gentoo btw"
+    "tooltip-format": "I use gentoo btw",
+		"on-click": "swaync-client -t"
   },
   "power-profiles-daemon": {
     "format": "{icon}",

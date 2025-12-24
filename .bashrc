@@ -3,9 +3,15 @@ if [[ $- != *i* ]] ; then
   return
 fi
 
-eval "$(starship init bash)"
-[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
+# vi mode
+if [[ $- == *i* ]]; then # in interactive session
+  set -o vi
+fi
 
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
+eval "$(starship init bash)"
+
+# bashrc
 # Put your fun stuff here.
 if [[ ${BLE_VERSION-} ]]; then
   bleopt prompt_ps1_transient=always
@@ -13,7 +19,9 @@ if [[ ${BLE_VERSION-} ]]; then
   ble-attach
 fi
 
+
 PATH="$PATH:/home/miners/.local/bin"
+
 
 # BOB
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -43,6 +43,7 @@ dashboard.setup({
             { action = "Telescope find_files", desc = " Find File ", icon = " ", key = "f" },
             { action = "Telescope oldfiles",   desc = " Recent Files ", icon = " ", key = "r" },
             { action = "Telescope live_grep",  desc = " Find Text ", icon = " ", key = "g" },
+            { action = "lua vim.pack.update()",  desc = " Update Plugins ", icon = " ", key = "u" },
             { action = "e $MYVIMRC",           desc = " Config ", icon = " ", key = "c" },
             { action = "qa",                   desc = " Quit ", icon = " ", key = "q" },
         },

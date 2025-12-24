@@ -3,6 +3,7 @@ add_newline = false
 format = """
 $username\
 $os\
+$Charater\
 $directory\
 $git_branch\
 $git_status\
@@ -32,7 +33,6 @@ show_always = true
 [character]
 success_symbol = "[➜](bold #50fa7b)" # Green for success
 error_symbol = "[➜](bold #ff6e6e)"   # Red for error
-vimcmd_symbol = "[❮](bold #50fa7b)"
 
 [directory]
 read_only = " 󰌾"
