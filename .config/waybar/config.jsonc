@@ -1,139 +1,140 @@
 {
-  "layer": "top", 
-  "position": "top", 
-  "height": 30, 
-  "spacing": 4, 
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
 
-  // Choose the order of the modules
-  "modules-left": [
-    "hyprland/workspaces",
-    "custom/sep",
-    "idle_inhibitor",
-    "custom/sep",
-    "clock",
-    "custom/sep",
-    "pulseaudio",
-    "custom/sep",
-    "hyprland/window",
-    "custom/sep"
-  ],
-  "modules-center": [
-    "custom/gentoo"
-  ],
-  "modules-right": [
-    "custom/sep",
-    "cpu",
-    "custom/sep",
-    "memory",
-    "custom/sep",
-    "disk",
-    "custom/sep",
-    "network",
-    "custom/sep",
-    "power-profiles-daemon",
-    "custom/sep",
-    "tray",
-    "battery"
-  ],
+    // -------------------------------------------------------------------------
+    // MODULE LAYOUT
+    // -------------------------------------------------------------------------
+    "modules-left": [
+        "custom/gentoo",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "cpu",
+        "memory",
+        "disk",
+        "pulseaudio",
+        "network",
+        "power-profiles-daemon",
+        "battery",
+        "tray"
+    ],
 
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "1",
-      "deactivated": "0"
-    }
-  },
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{name}",
-    "persistent-workspaces": {
-      "*" : 5
-    }
-  },
-  "hyprland/window" : {
-    "max-length": 25,
-    "seperate-outputs": false
-  },
-  "tray": {
-    // "icon-size": 21,
-    "spacing": 10
-    // "icons": {
-    //   "blueman": "bluetooth",
-    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-    // }
-  },
-  "clock": {
-    "format": "{:%I:%M %p}",
-    "format-alt": "{:%Y-%m-%d}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-  },
-  "cpu": {
-    "format": "CPU: {usage}%",
-    "tooltip": false
-  },
-  "memory": {
-    "format": "Mem: {used}GiB"
-  },
-  "disk": {
-    "interval": 60,
-    "path": "/",
-    "format": "Disk: {free}"
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+    "custom/gentoo": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "swaync-client -t" 
     },
-    "format": "{capacity}% {icon} ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "Bat {capacity}%",
-    "format-time": "{H}:{M}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "network": {
-    "format": "Online",
-    "format-disconnected": "Disconnected ⚠"
-  },
-  "custom/sep": {
-    "format" : "|",
-    "interval" : 0
-  },
-  "pulseaudio": {
-    "format": "{volume}% ",
-    "format-bluetooth": "{volume}% ",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "phone-muted": "",
-      "portable": "",
-      "car": "",
-      "default": ["", ""]
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 5 
+        }
     },
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
-  },
-  "custom/gentoo": {
-    "format" : "  ",
-    "interval" : 0,
-    "tooltip-format": "I use gentoo btw",
-		"on-click": "swaync-client -t"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "P",
-      "balanced": "B",
-      "power-saver": "S"
+
+    "hyprland/window": {
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": " {:%Y-%m-%d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "", // Eye open (Awake)
+            "deactivated": "" // Eye closed (Chill)
+        }
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%", // Icon instead of "CPU"
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": " {used}G" // Icon instead of "Mem"
+    },
+
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": " {percentage_used}%" // Percentage is easier to read at a glance than raw GB
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "network": {
+        // Just the icon for "Online". Text takes too much space.
+        "format": "", 
+        "format-ethernet": "",
+        "format-linked": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
     }
-  },
 }

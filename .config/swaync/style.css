@@ -1,112 +1,106 @@
-/* GLOBAL FONT & COLORS */
-* {
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-}
-
-/* THE CONTAINER (Glass Base) */
-.control-center .notification-row:focus,
-.control-center .notification-row:hover {
-    opacity: 1;
-    background: #1a1628;
-}
-
-/* THE NOTIFICATION BUBBLE */
-.notification-row {
-    outline: none;
-    margin-bottom: 10px;
-    border-radius: 12px;
-}
-
-.notification {
-    background: rgba(15, 11, 24, 0.9); /* Deep Void Purple */
-    border-radius: 12px;
-    padding: 0;
-    margin: 0px;
-    border: 2px solid #bd5eff; /* Electric Violet Border */
-    box-shadow: 0 0 8px 0 rgba(189, 94, 255, 0.4); /* Violet Glow */
-}
-
-/* HEADER / SUMMARY */
-.summary {
-    color: #bd5eff; /* Violet Title */
-    font-size: 16px;
-    background: transparent;
-}
-
-/* TIME */
-.time {
-    color: #8be9fd; /* Cyan Time */
-    font-size: 12px;
-    background: transparent;
-    margin-right: 12px;
-}
-
-/* BODY TEXT */
-.body {
-    color: #dcd7ea; /* Lavender Text */
-    font-size: 14px;
-    background: transparent;
-}
-
-/* CLOSE BUTTON */
-.close-button {
-    background: #1a1628;
-    color: #ff6e6e; /* Red X */
-    border-radius: 100%;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0px;
-    min-height: 24px;
-    min-width: 24px;
-}
-
-.close-button:hover {
-    background: #ff6e6e;
-    color: #ffffff;
-}
-
-/* CONTROL CENTER (The Side Panel) */
+/* ROOT: The Notification Center Window */
 .control-center {
-    background: rgba(15, 11, 24, 0.85);
-    border-radius: 12px;
-    border: 2px solid #bd5eff;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
-    margin: 10px;
+    background: #161616;
+    border: 2px solid #262626;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* WIDGETS */
 .widget-title {
-    color: #bd5eff;
-    font-size: 20px;
+    color: #dde1e6;
+    background: #161616;
+    border-bottom: 1px solid #262626;
+    font-size: 1.2rem;
+    padding: 10px;
 }
 
 .widget-title > button {
-    font-size: 12px;
-    color: #dcd7ea;
-    background: #26233a;
-    border: 1px solid #bd5eff;
-    border-radius: 8px;
-    padding: 4px 12px;
+    background: #262626;
+    color: #dde1e6;
+    border: none;
+    border-radius: 0;
+    padding: 5px 10px;
 }
 
 .widget-title > button:hover {
-    background: #bd5eff;
-    color: #0f0b18;
+    background: #ee5396; /* Pink Hover */
+    color: #161616;
 }
 
+/* DND TOGGLE */
 .widget-dnd {
-    background: #1a1628;
-    border-radius: 8px;
-    margin: 10px;
+    background: #161616;
+    margin: 8px;
+    border-radius: 0;
 }
 
 .widget-dnd > switch {
-    border-radius: 8px;
-    background: #26233a;
+    background: #262626;
+    border-radius: 0;
 }
 
 .widget-dnd > switch:checked {
-    background: #bd5eff;
+    background: #ee5396; /* Pink when DND is ON */
+}
+
+/* MEDIA PLAYER (Mpris) */
+.widget-mpris {
+    background: #161616;
+    padding: 8px;
+    color: #dde1e6;
+}
+
+.widget-mpris-player {
+    background: #262626;
+    padding: 8px;
+    border-radius: 0;
+}
+
+/* SLIDERS (Volume / Backlight) */
+.widget-volume, 
+.widget-backlight {
+    background: #161616;
+    padding: 4px 8px;
+    margin: 4px 0;
+}
+
+.widget-volume trough, 
+.widget-backlight trough {
+    background: #262626;
+    border-radius: 0;
+    min-height: 8px;
+}
+
+.widget-volume highlight, 
+.widget-backlight highlight {
+    background: #ee5396; /* Pink Progress */
+    border-radius: 0;
+}
+
+/* NOTIFICATIONS LIST */
+.notification-row {
+    outline: none;
+    margin: 4px 0;
+}
+
+.notification {
+    background: #161616;
+    padding: 10px;
+    border: 1px solid #262626;
+    border-radius: 0;
+    margin: 0 10px;
+}
+
+.notification-content {
+    background: transparent;
+}
+
+.summary {
+    color: #ee5396; /* Pink Headers */
+    font-weight: bold;
+}
+
+.body {
+    color: #dde1e6;
 }

@@ -2,25 +2,25 @@
 window#osd {
     padding: 12px 20px;
     border-radius: 99px;
-    background-color: rgba(15, 11, 24, 0.95); /* Void Purple */
-    border: 2px solid #bd5eff; /* Violet Border */
+    background-color: #161616; /* Solid Black */
+    border: none;              /* Removed border bloat */
 }
 
-/* The Background Track */
+/* The Background Track (Empty) */
 trough {
-    background-color: #26233a; /* Dark Grey/Purple */
+    background-color: #262626; /* Subtle Dark Grey */
     border-radius: 99px;
-    min-height: 10px;
+    min-height: 8px;           /* Slightly thinner for efficiency */
 }
 
 /* The Volume Level (Fill) */
 highlight, progress {
-    background-color: #bd5eff; /* Electric Violet */
+    background-color: #ee5396; /* Oxocarbon Pink */
     border-radius: 99px;
-    box-shadow: 0 0 10px #bd5eff; /* Neon Glow */
+    box-shadow: none;          /* Removed neon glow */
 }
 
 /* Icons/Label */
 label, image {
-    color: #dcd7ea; /* Lavender */
+    color: #dde1e6; /* White text for readability */
 }

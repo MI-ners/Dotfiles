@@ -1,310 +1,94 @@
 add_newline = false
-# A global format to keep things tight
+
 format = """
-$username\
-$os\
-$Charater\
 $directory\
 $git_branch\
 $git_status\
-$lua\
+$character"""
+
+right_format = """
 $c\
 $rust\
 $golang\
 $nodejs\
 $php\
 $java\
-$kotlin\
-$haskell\
 $python\
-$docker_context\
-$conda\
+$lua\
 $cmd_duration\
-$line_break\
-$character"""
-
-[username]
-style_user = "bold #ff757f"
-style_root = "bold #ff757f"
-format = '[$user]($style)[@](bold #f1fa8c)' 
-disabled = false
-show_always = true
+"""
 
 [character]
-success_symbol = "[➜](bold #50fa7b)" # Green for success
-error_symbol = "[➜](bold #ff6e6e)"   # Red for error
+success_symbol = "[❯](bold #ee5396)" 
+error_symbol = "[❯](bold #ff7eb6)" 
+vimcmd_symbol = "[❮](bold #42be65)"
 
 [directory]
-read_only = " 󰌾"
-style = "bold #8be9fd" # Cyan
+style = "bold #3ddbd9" 
 format = "[$path]($style)[$read_only]($style) "
-truncation_length = 3
+truncation_length = 4
 truncation_symbol = "…/"
+read_only = " "
 
 [git_branch]
 symbol = " "
-style = "bold #bd5eff" # Electric Violet
-format = "on [$symbol$branch]($style) "
+style = "bold #be95ff"
+format = "via [$symbol$branch]($style) "
 
 [git_status]
-style = "bold #ff757f" # Pink
+style = "bold #ff7eb6" 
 format = "[$all_status$ahead_behind]($style) "
-ahead = ">"
-behind = "<"
-diverged = "<>"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
 renamed = "r"
 deleted = "x"
 
 [cmd_duration]
 min_time = 2000
-style = "bold #f1fa8c" # Yellow
+style = "bold #525252" 
 format = "took [$duration]($style) "
 
-# -- Languages & Tools (The Rainbow) --
-
-[aws]
-symbol = " "
-style = "bold #ffb86c" # Orange
-
-[buf]
-symbol = " "
-style = "bold #8be9fd"
-
-[bun]
-symbol = " "
-style = "bold #ff757f"
-
 [c]
-symbol = " "
-style = "bold #6272a4" # Blue
-
-[cpp]
-symbol = " "
-style = "bold #6272a4"
-
-[cmake]
-symbol = " "
-style = "bold #8be9fd"
-
-[conda]
-symbol = " "
-style = "bold #50fa7b"
-
-[crystal]
-symbol = " "
-style = "bold #bd5eff"
-
-[dart]
-symbol = " "
-style = "bold #8be9fd"
-
-[deno]
-symbol = " "
-style = "bold #50fa7b"
-
-[docker_context]
-symbol = " "
-style = "bold #6272a4"
-
-[elixir]
-symbol = " "
-style = "bold #bd5eff"
-
-[elm]
-symbol = " "
-style = "bold #8be9fd"
-
-[fennel]
-symbol = " "
-style = "bold #50fa7b"
-
-[fortran]
-symbol = " "
-style = "bold #bd5eff"
-
-[fossil_branch]
-symbol = " "
-style = "bold #bd5eff"
-
-[gcloud]
-symbol = " "
-style = "bold #8be9fd"
-
-[git_commit]
-tag_symbol = '  '
-
-[golang]
-symbol = " "
-style = "bold #8be9fd" # Go is Cyan
-
-[gradle]
-symbol = " "
-style = "bold #8be9fd"
-
-[guix_shell]
-symbol = " "
-style = "bold #f1fa8c"
-
-[haskell]
-symbol = " "
-style = "bold #bd5eff"
-
-[haxe]
-symbol = " "
-style = "bold #ffb86c"
-
-[hg_branch]
-symbol = " "
-style = "bold #bd5eff"
-
-[hostname]
-ssh_symbol = " "
-style = "bold #bd5eff"
-
-[java]
-symbol = " "
-style = "bold #ff6e6e" # Red for Java
-
-[julia]
-symbol = " "
-style = "bold #bd5eff"
-
-[kotlin]
-symbol = " "
-style = "bold #bd5eff"
-
-[lua]
-symbol = " "
-style = "bold #50fa7b" # Lua Green
-
-[memory_usage]
-symbol = "󰍛 "
-style = "bold #f1fa8c"
-
-[meson]
-symbol = "󰔷 "
-style = "bold #8be9fd"
-
-[nim]
-symbol = "󰆥 "
-style = "bold #f1fa8c"
-
-[nix_shell]
-symbol = " "
-style = "bold #8be9fd"
-
-[nodejs]
-symbol = " "
-style = "bold #50fa7b" # Node Green
-
-[ocaml]
-symbol = " "
-style = "bold #ffb86c"
-
-[os]
-style = "bold #bd5eff" # Distro Icon in Violet
-disabled = false
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-AOSC = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-style = "bold #f1fa8c"
-
-[perl]
-symbol = " "
-style = "bold #8be9fd"
-
-[php]
-symbol = " "
-style = "bold #bd5eff"
-
-[pijul_channel]
-symbol = " "
-style = "bold #bd5eff"
-
-[pixi]
-symbol = "󰏗 "
-style = "bold #f1fa8c"
-
-[python]
-symbol = " "
-style = "bold #f1fa8c" # Python Yellow
-
-[rlang]
-symbol = "󰟔 "
-style = "bold #8be9fd"
-
-[ruby]
-symbol = " "
-style = "bold #ff6e6e"
+symbol = "C "
+style = "bold #33b1ff"
 
 [rust]
-symbol = "󱘗 "
-style = "bold #ff6e6e" # Rust Red
+symbol = "Rs "
+style = "bold #ff7eb6"
 
-[scala]
-symbol = " "
-style = "bold #ff6e6e"
+[golang]
+symbol = "Go "
+style = "bold #3ddbd9"
 
-[status]
-symbol = " "
-style = "bold #ff6e6e"
+[nodejs]
+symbol = "Node "
+style = "bold #42be65" 
 
-[swift]
-symbol = " "
-style = "bold #ffb86c"
+[php]
+symbol = "Php "
+style = "bold #be95ff"
 
-[xmake]
-symbol = " "
-style = "bold #8be9fd"
+[java]
+symbol = "Java "
+style = "bold #ff7eb6"
 
-[zig]
-symbol = " "
-style = "bold #ffb86c"
+[python]
+symbol = "Py "
+style = "bold #ffe97b"
+
+[lua]
+symbol = "Lua "
+style = "bold #33b1ff" 
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true
+
+[os]
+disabled = true
+
+[package]
+disabled = true 
