@@ -63,9 +63,35 @@
       "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "mini-git": {
+      "rev": "832467238636e3dfa1db76de929996b6668c35ef",
+      "src": "https://github.com/nvim-mini/mini-git",
+      "version": "'main'"
+    },
+    "mini.icons": {
+      "rev": "ff2e4f1d29f659cc2bad0f9256f2f6195c6b2428",
+      "src": "https://github.com/nvim-mini/mini.icons",
+      "version": "'main'"
+    },
     "mini.indentscope": {
       "rev": "0308f949f31769e509696af5d5f91cebb2159c69",
-      "src": "https://github.com/nvim-mini/mini.indentscope"
+      "src": "https://github.com/nvim-mini/mini.indentscope",
+      "version": "'main'"
+    },
+    "mini.pick": {
+      "rev": "0c56dc3ef9b15e9659ce09331fdc82449349701b",
+      "src": "https://github.com/nvim-mini/mini.pick",
+      "version": "'main'"
+    },
+    "mini.starter": {
+      "rev": "8ee6ce6a4c9be47682516908557cc062c4d595a2",
+      "src": "https://github.com/nvim-mini/mini.starter",
+      "version": "'main'"
+    },
+    "mini.surround": {
+      "rev": "88c52297ed3e69ecf9f8652837888ecc727a28ee",
+      "src": "https://github.com/nvim-mini/mini.surround",
+      "version": "'main'"
     },
     "nvim-cmp": {
       "rev": "d97d85e01339f01b842e6ec1502f639b080cb0fc",

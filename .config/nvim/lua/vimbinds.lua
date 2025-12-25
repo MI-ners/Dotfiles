@@ -31,3 +31,5 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- vimWiki previews
 vim.keymap.set("n", "<leader>wp", ":LivePreview start<CR>", { desc = "Preview Current Markdown" })
 
+--mini pick
+vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files"})

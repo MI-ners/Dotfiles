@@ -12,7 +12,7 @@ cmp.setup({
 	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "telescope" },
+        { name = "mini.pick" },
 		{ name = "buffer" },
 		{ name = "path" },
 	}),

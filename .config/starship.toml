@@ -38,11 +38,11 @@ format = "via [$symbol$branch]($style) "
 [git_status]
 style = "bold #ff7eb6" 
 format = "[$all_status$ahead_behind]($style) "
-ahead = ""     
-behind = ""     
-diverged = ""
-renamed = "r"
-deleted = "x"
+ahead = "A"     
+behind = "B"     
+diverged = "D"
+renamed = "R"
+deleted = "X"
 
 [cmd_duration]
 min_time = 2000
