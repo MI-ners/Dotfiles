@@ -4,9 +4,6 @@
     "height": 34,
     "spacing": 4,
 
-    // -------------------------------------------------------------------------
-    // MODULE LAYOUT
-    // -------------------------------------------------------------------------
     "modules-left": [
         "custom/gentoo",
         "hyprland/workspaces",
@@ -49,7 +46,7 @@
 
     "clock": {
         "format": "{:%I:%M %p}",
-        "format-alt": " {:%Y-%m-%d}",
+        "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
 
@@ -84,8 +81,6 @@
         "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -99,8 +94,6 @@
     "network": {
         // Just the icon for "Online". Text takes too much space.
         "format": "", 
-        "format-ethernet": "",
-        "format-linked": "",
         "format-disconnected": "",
         "tooltip-format": "{ifname} via {gwaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",

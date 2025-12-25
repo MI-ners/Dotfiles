@@ -1,18 +1,35 @@
-/* ROOT: The Notification Center Window */
-.control-center {
-    background: #161616;
-    border: 2px solid #262626;
-    border-radius: 0;
-    box-shadow: none;
+/* GLOBAL FONT FIX */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
 }
 
-/* WIDGETS */
-.widget-title {
-    color: #dde1e6;
+/* THE SIDEBAR CONTAINER */
+.control-center {
     background: #161616;
-    border-bottom: 1px solid #262626;
-    font-size: 1.2rem;
+    border-right: 2px solid #262626; /* Separation line from screen */
+    border-radius: 0;
+    box-shadow: none;
     padding: 10px;
+}
+
+/* REMOVE SCROLLBARS (Clean Look) */
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    opacity: 0.5;
+}
+
+/* WIDGETS (Compact Stacking) */
+.widget-title {
+    color: #ee5396;
+    background: #161616;
+    border-bottom: 2px solid #262626;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .widget-title > button {
@@ -20,85 +37,76 @@
     color: #dde1e6;
     border: none;
     border-radius: 0;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    font-size: 1rem;
 }
 
 .widget-title > button:hover {
-    background: #ee5396; /* Pink Hover */
+    background: #ee5396;
     color: #161616;
 }
 
-/* DND TOGGLE */
-.widget-dnd {
+/* VOLUME / BACKLIGHT SLIDERS */
+.widget-volume,
+.widget-backlight {
+    background: #262626; /* Darker background block */
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 0;
+}
+
+.widget-volume trough,
+.widget-backlight trough {
     background: #161616;
-    margin: 8px;
+    border-radius: 0;
+    min-height: 6px;
+}
+
+.widget-volume highlight,
+.widget-backlight highlight {
+    background: #ee5396;
     border-radius: 0;
 }
 
-.widget-dnd > switch {
-    background: #262626;
-    border-radius: 0;
+.widget-volume label,
+.widget-backlight label {
+    color: #dde1e6;
+    font-size: 1rem;
 }
 
-.widget-dnd > switch:checked {
-    background: #ee5396; /* Pink when DND is ON */
-}
-
-/* MEDIA PLAYER (Mpris) */
+/* MEDIA PLAYER */
 .widget-mpris {
     background: #161616;
-    padding: 8px;
+    padding: 5px 0;
     color: #dde1e6;
 }
-
 .widget-mpris-player {
     background: #262626;
-    padding: 8px;
+    padding: 15px;
     border-radius: 0;
 }
 
-/* SLIDERS (Volume / Backlight) */
-.widget-volume, 
-.widget-backlight {
-    background: #161616;
-    padding: 4px 8px;
-    margin: 4px 0;
-}
-
-.widget-volume trough, 
-.widget-backlight trough {
-    background: #262626;
-    border-radius: 0;
-    min-height: 8px;
-}
-
-.widget-volume highlight, 
-.widget-backlight highlight {
-    background: #ee5396; /* Pink Progress */
-    border-radius: 0;
-}
-
-/* NOTIFICATIONS LIST */
+/* NOTIFICATIONS */
 .notification-row {
+    margin: 10px 0;
     outline: none;
-    margin: 4px 0;
 }
 
 .notification {
-    background: #161616;
+    background: #262626;
     padding: 10px;
-    border: 1px solid #262626;
+    border: 1px solid #161616;
     border-radius: 0;
-    margin: 0 10px;
-}
-
-.notification-content {
-    background: transparent;
+    margin: 0;
+    box-shadow: none;
 }
 
 .summary {
-    color: #ee5396; /* Pink Headers */
-    font-weight: bold;
+    color: #be95ff; /* Lavender Header */
+}
+
+.time {
+    color: #525252;
 }
 
 .body {
