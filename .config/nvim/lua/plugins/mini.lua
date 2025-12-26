@@ -9,13 +9,16 @@ vim.pack.add({
 
 require("mini.icons").setup()
 require("mini.pick").setup({
-	window = { config = { border = "double" } },
 })
+
 require("mini.indentscope").setup({
 	draw = {
 		delay = 0,
 	},
 })
+
 require("mini.starter").setup()
+
 require("mini.git").setup()
+
 require("mini.surround").setup()

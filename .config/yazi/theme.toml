@@ -1,0 +1,80 @@
+[mgr]
+cwd = { fg = "#be95ff", italic = true } # Lavender
+
+hovered         = { fg = "#161616", bg = "#ee5396", bold = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#ffe97b", bold = true, italic = true } # Yellow
+find_position = { fg = "#be95ff", italic = true }
+
+marker_copied   = { fg = "#42be65", bg = "#42be65" } # Green
+marker_cut      = { fg = "#ee5396", bg = "#ee5396" } # Pink
+marker_marked   = { fg = "#3ddbd9", bg = "#3ddbd9" } # Cyan
+marker_selected = { fg = "#be95ff", bg = "#be95ff" } # Lavender
+
+border_symbol = "│"
+border_style  = { fg = "#262626" } # Subtle Dark Grey
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+progress_label  = { fg = "#161616", bg = "#be95ff", bold = true }
+progress_normal = { fg = "#161616", bg = "#262626" }
+progress_error  = { fg = "#161616", bg = "#ee5396" }
+
+perm_sep   = { fg = "#525252" }
+perm_type  = { fg = "#be95ff" }
+perm_read  = { fg = "#dde1e6" }
+perm_write = { fg = "#ee5396" }
+perm_exec  = { fg = "#42be65" }
+
+[mode]
+normal_main = { fg = "#161616", bg = "#be95ff", bold = true }
+normal_alt  = { fg = "#be95ff", bg = "#262626" }
+
+select_main = { fg = "#161616", bg = "#ee5396", bold = true }
+select_alt  = { fg = "#ee5396", bg = "#262626" }
+
+unset_main  = { fg = "#161616", bg = "#525252", bold = true }
+unset_alt   = { fg = "#525252", bg = "#262626" }
+
+[tabs]
+active   = { fg = "#161616", bg = "#ee5396", bold = true }
+inactive = { fg = "#525252", bg = "#161616" }
+
+sep_inner = { open = " ", close = " " }
+sep_outer = { open = " ", close = " " }
+
+[pick]
+border   = { fg = "#ee5396" }
+active   = { fg = "#ee5396", bold = true }
+inactive = { fg = "#525252" }
+
+[input]
+border   = { fg = "#be95ff" }
+title    = { fg = "#be95ff" }
+value    = { fg = "#dde1e6" }
+selected = { fg = "#161616", bg = "#be95ff" }
+
+[confirm]
+border     = { fg = "#ee5396" }
+title      = { fg = "#ee5396" }
+btn_yes    = { fg = "#161616", bg = "#ee5396", bold = true }
+btn_no     = { fg = "#525252", bg = "#161616" }
+btn_labels = [ "  Y  ", "  N  " ]
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#be95ff" },
+
+	{ mime = "{audio,video}/*", fg = "#3ddbd9" },
+
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#ee5396" },
+
+	{ mime = "application/{pdf,doc,rtf}", fg = "#dde1e6" },
+
+	{ name = "*", is = "exec", fg = "#42be65" },
+
+	{ name = "*/", fg = "#be95ff", bold = true }
+]

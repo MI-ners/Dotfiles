@@ -1,6 +1,6 @@
-/* GLOBAL FONT FIX */
+/* GLOBAL FONT FIX      font-family: "JetBrainsMono Nerd Font"; */
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "GeistMono Nerd Font";
     font-weight: bold;
 }
 
