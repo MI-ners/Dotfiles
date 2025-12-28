@@ -8,7 +8,7 @@
 @define-color red     #ff7eb6;  
 
 * {
-    font-family: "GeistMono Nerd Font", monospace;
+    font-family: "SFMono", heavy;
     font-size: 17px; 
     font-weight: bold;
     border: none;
