@@ -14,6 +14,7 @@ vim.g.vimwiki_markdown_link_ext = 1
 require("plugins.lspStuff")
 require("plugins.treesitter")
 require("plugins.mini")
+require("plugins.tsAuto-Tag")
 require("plugins.colorscheme")
 require("plugins.nvimCmp")
 require("plugins.showkeys")
@@ -44,4 +45,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set({ "n", "v" }, "gra", vim.lsp.buf.code_action, { buffer = ev.buf, desc = "Code actions" })
 	end,
 })
-

@@ -33,7 +33,7 @@ export PATH=$PATH:/home/miners/.spicetify
 export PATH=$PATH:$HOME/.spicetify
 
 # go 
-export GOPATH="$HOME/dev/env/go"
+export GOPATH="$HOME/devel/env/go"
 # tiny go 
 export PATH=$PATH:/usr/local/tinygo/bin
 export PATH="$PATH:$GOPATH/bin"

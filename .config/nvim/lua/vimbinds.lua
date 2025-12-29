@@ -1,10 +1,12 @@
 -- Vim vanilla keymaps
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Oil/Explorer" })
-vim.keymap.set("n", "<leader><tab>", ":write<CR>", { desc = "Write" })
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 
--- format current buf
-vim.keymap.set({ "n", "v", "x" }, "<leader>r", vim.lsp.buf.format, { desc = "Format current buffer" })
+-- write/format conform style
+vim.keymap.set({ "n", "v", "x" }, "<leader>r", function()
+	vim.lsp.buf.format()
+	vim.cmd("write")
+end, { desc = "Format and Save" })
 
 -- move text up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

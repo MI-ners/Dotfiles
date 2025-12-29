@@ -9,6 +9,11 @@ vim.pack.add({
 
 require("mini.icons").setup()
 require("mini.pick").setup({
+	window = {
+		config = {
+			border = "rounded",
+		},
+	},
 })
 
 require("mini.indentscope").setup({

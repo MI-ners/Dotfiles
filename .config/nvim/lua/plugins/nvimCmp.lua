@@ -12,7 +12,7 @@ cmp.setup({
 	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-        { name = "mini.pick" },
+		{ name = "mini.pick" },
 		{ name = "buffer" },
 		{ name = "path" },
 	}),
@@ -25,6 +25,8 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<C-n>"] = cmp.mapping.select_next_item(),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<Down>"] = cmp.mapping.select_next_item(),
 		["<Up>"] = cmp.mapping.select_prev_item(),
 	}),

@@ -34,11 +34,11 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "go",
-    group = indent_group,
-    callback = function()
-        vim.opt_local.expandtab = false -- Use real tabs
-        vim.opt_local.tabstop = 4       -- Visual width of tab
-        vim.opt_local.shiftwidth = 4    -- Indent width
-    end,
+	pattern = "go",
+	group = indent_group,
+	callback = function()
+		vim.opt_local.expandtab = false -- Use real tabs
+		vim.opt_local.tabstop = 4 -- Visual width of tab
+		vim.opt_local.shiftwidth = 4 -- Indent width
+	end,
 })
