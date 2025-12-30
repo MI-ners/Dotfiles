@@ -12,6 +12,10 @@
       "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
       "src": "https://github.com/hrsh7th/cmp-path"
     },
+    "conform.nvim": {
+      "rev": "df83eeaab265dacd2eef139a78e502a3f8926618",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "dashboard-nvim": {
       "rev": "0775e567b6c0be96d01a61795f7b64c1758262f6",
       "src": "https://github.com/nvimdev/dashboard-nvim"

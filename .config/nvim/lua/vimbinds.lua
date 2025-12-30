@@ -2,11 +2,7 @@
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Oil/Explorer" })
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 
--- write/format conform style
-vim.keymap.set({ "n", "v", "x" }, "<leader>r", function()
-    vim.lsp.buf.format()
-    vim.cmd("write")
-end, { desc = "Format and Save" })
+vim.keymap.set("n", "<leader>r", ":write<CR>", { desc = "Format/Save" })
 
 -- move text up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -49,16 +45,16 @@ vim.keymap.set("n", "<leader>g", "mD", { desc = "Set Mark C (Slot 4)" })
 
 -- opens mini.pick for buffers
 vim.keymap.set("n", "<leader><space>", function()
-    require("mini.pick").builtin.buffers({
-        tool = 'git',
-        include_current = false,
-    })
+	require("mini.pick").builtin.buffers({
+		tool = "git",
+		include_current = false,
+	})
 end, { desc = "Switch Buffer" })
 
 -- deletes all current marks
 vim.keymap.set("n", "<leader>X", function()
-    vim.cmd("delmarks A-Z")
-    print("Marks cleared (All Global Marks A-Z deleted).")
+	vim.cmd("delmarks A-Z")
+	print("Marks cleared (All Global Marks A-Z deleted).")
 end, { desc = "Clear All Global Marks" })
 
 --code_action

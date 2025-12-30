@@ -15,7 +15,7 @@ marker_selected = { fg = "#be95ff", bg = "#be95ff" }
 border_symbol = "│"
 border_style  = { fg = "#262626" } 
 
-[status 
+[status]
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
