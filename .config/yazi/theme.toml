@@ -1,21 +1,21 @@
 [mgr]
-cwd = { fg = "#be95ff", italic = true } # Lavender
+cwd = { fg = "#be95ff", italic = true } 
 
 hovered         = { fg = "#161616", bg = "#ee5396", bold = true }
 preview_hovered = { underline = true }
 
-find_keyword  = { fg = "#ffe97b", bold = true, italic = true } # Yellow
+find_keyword  = { fg = "#ffe97b", bold = true, italic = true } 
 find_position = { fg = "#be95ff", italic = true }
 
-marker_copied   = { fg = "#42be65", bg = "#42be65" } # Green
-marker_cut      = { fg = "#ee5396", bg = "#ee5396" } # Pink
-marker_marked   = { fg = "#3ddbd9", bg = "#3ddbd9" } # Cyan
-marker_selected = { fg = "#be95ff", bg = "#be95ff" } # Lavender
+marker_copied   = { fg = "#42be65", bg = "#42be65" } 
+marker_cut      = { fg = "#ee5396", bg = "#ee5396" } 
+marker_marked   = { fg = "#3ddbd9", bg = "#3ddbd9" } 
+marker_selected = { fg = "#be95ff", bg = "#be95ff" } 
 
 border_symbol = "│"
-border_style  = { fg = "#262626" } # Subtle Dark Grey
+border_style  = { fg = "#262626" } 
 
-[status]
+[status 
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 

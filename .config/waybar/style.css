@@ -1,15 +1,15 @@
-@define-color bg      #161616;
-@define-color fg      #dde1e6;
-@define-color grey    #525252;  
-@define-color dim     #262626;  
-@define-color pink    #ee5396;  
-@define-color purple  #be95ff;  
-@define-color teal    #3ddbd9;  
-@define-color red     #ff7eb6;  
+@define-color bg #161616;
+@define-color fg #dde1e6;
+@define-color grey #525252;
+@define-color dim #262626;
+@define-color pink #ee5396;
+@define-color purple #be95ff;
+@define-color teal #3ddbd9;
+@define-color red #ff7eb6;
 
 * {
-    font-family: "SFMono", heavy;
-    font-size: 17px; 
+    font-family: "Iosevka", heavy;
+    font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 0;
@@ -19,9 +19,9 @@
 window#waybar {
     background-color: @bg;
     color: @fg;
-    border-bottom: 1px solid @dim; 
+    border-bottom: 1px solid @dim;
 }
- 
+
 #workspaces {
     background-color: @bg;
     margin: 0 4px;
@@ -29,7 +29,7 @@ window#waybar {
 
 #workspaces button {
     padding: 0 10px;
-    color: @pink;            
+    color: @pink;
     background: transparent;
     transition: all 0.3s ease;
 }
@@ -41,7 +41,7 @@ window#waybar {
 #workspaces button.active {
     color: @pink;
     background-color: @dim;
-    border-radius: 4px; 
+    border-radius: 4px;
 }
 
 #workspaces button.urgent {
@@ -53,7 +53,8 @@ window#waybar {
 #workspaces button:hover {
     background: @dim;
     color: @fg;
-    box-shadow: none; /* Removed the white shadow */
+    box-shadow: none;
+    /* Removed the white shadow */
 }
 
 #idle_inhibitor,
@@ -108,17 +109,19 @@ window#waybar {
 }
 
 #tray {
-    background-color: @bg; /* Removed the purple box */
+    background-color: @bg;
+    /* Removed the purple box */
 }
 
 #custom-sep {
     color: @dim;
     padding: 0 5px;
 }
- 
+
 #custom-gentoo {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 20px;
-    color: #be95ff; /* Oxocarbon Lavender */
+    color: #be95ff;
+    /* Oxocarbon Lavender */
 }

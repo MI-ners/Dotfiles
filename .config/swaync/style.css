@@ -1,19 +1,16 @@
-/* GLOBAL FONT FIX      font-family: "JetBrainsMono Nerd Font"; */
 * {
-    font-family: "GeistMono Nerd Font";
+    font-family: "Iosevka";
     font-weight: bold;
 }
 
-/* THE SIDEBAR CONTAINER */
 .control-center {
     background: #161616;
-    border-right: 2px solid #262626; /* Separation line from screen */
+    border-right: 2px solid #262626;
     border-radius: 0;
     box-shadow: none;
     padding: 10px;
 }
 
-/* REMOVE SCROLLBARS (Clean Look) */
 .control-center-list {
     background: transparent;
 }
@@ -22,7 +19,6 @@
     opacity: 0.5;
 }
 
-/* WIDGETS (Compact Stacking) */
 .widget-title {
     color: #ee5396;
     background: #161616;
@@ -32,7 +28,7 @@
     margin-bottom: 10px;
 }
 
-.widget-title > button {
+.widget-title>button {
     background: #262626;
     color: #dde1e6;
     border: none;
@@ -41,15 +37,14 @@
     font-size: 1rem;
 }
 
-.widget-title > button:hover {
+.widget-title>button:hover {
     background: #ee5396;
     color: #161616;
 }
 
-/* VOLUME / BACKLIGHT SLIDERS */
 .widget-volume,
 .widget-backlight {
-    background: #262626; /* Darker background block */
+    background: #262626;
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 0;
@@ -74,19 +69,18 @@
     font-size: 1rem;
 }
 
-/* MEDIA PLAYER */
 .widget-mpris {
     background: #161616;
     padding: 5px 0;
     color: #dde1e6;
 }
+
 .widget-mpris-player {
     background: #262626;
     padding: 15px;
     border-radius: 0;
 }
 
-/* NOTIFICATIONS */
 .notification-row {
     margin: 10px 0;
     outline: none;
@@ -102,7 +96,7 @@
 }
 
 .summary {
-    color: #be95ff; /* Lavender Header */
+    color: #be95ff;
 }
 
 .time {

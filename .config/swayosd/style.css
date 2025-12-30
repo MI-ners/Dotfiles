@@ -1,26 +1,24 @@
-/* Container Window */
 window#osd {
     padding: 12px 20px;
     border-radius: 99px;
-    background-color: #161616; /* Solid Black */
-    border: none;              /* Removed border bloat */
+    background-color: #161616;
+    border: none;
 }
 
-/* The Background Track (Empty) */
 trough {
-    background-color: #262626; /* Subtle Dark Grey */
+    background-color: #262626;
     border-radius: 99px;
-    min-height: 8px;           /* Slightly thinner for efficiency */
+    min-height: 8px;
 }
 
-/* The Volume Level (Fill) */
-highlight, progress {
-    background-color: #ee5396; /* Oxocarbon Pink */
+highlight,
+progress {
+    background-color: #ee5396;
     border-radius: 99px;
-    box-shadow: none;          /* Removed neon glow */
+    box-shadow: none;
 }
 
-/* Icons/Label */
-label, image {
-    color: #dde1e6; /* White text for readability */
+label,
+image {
+    color: #dde1e6;
 }
