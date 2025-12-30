@@ -60,3 +60,6 @@ vim.keymap.set("n", "<leader>X", function()
     vim.cmd("delmarks A-Z")
     print("Marks cleared (All Global Marks A-Z deleted).")
 end, { desc = "Clear All Global Marks" })
+
+--code_action
+vim.keymap.set({ "n", "v" }, "gra", vim.lsp.buf.code_action, { desc = "Code actions" })

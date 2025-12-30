@@ -27,7 +27,7 @@ local function get_git_branch()
             if #head > 7 and not head:find("/") and not head:find(" ") then
                 head = head:sub(1, 7)
             end
-            return "  Git: " .. head
+            return "Git: " .. head
         end
     end
     return ""
