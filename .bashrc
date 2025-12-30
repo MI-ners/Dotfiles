@@ -57,6 +57,7 @@ alias ls='eza -l'
 alias lsa='eza -a -l --no-symlinks'
 alias ..='cd ..'
 alias ff="fastfetch -c examples/13"
+alias ph="tmux new -s 67"
 
 #for esp32
 alias tflash='/usr/local/tinygo/bin/tinygo flash -x -target=esp32-coreboard-v2 -port=/dev/ttyUSB0'

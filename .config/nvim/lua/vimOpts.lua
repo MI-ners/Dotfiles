@@ -1,7 +1,7 @@
 -- Vim opts
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
@@ -18,27 +18,27 @@ vim.o.cursorline = true
 vim.o.ignorecase = true
 vim.o.incsearch = true
 vim.o.undofile = true
-vim.o.winborder = "rounded"
+vim.o.winborder = "double"
 
 -- Vim diagnosis
 vim.diagnostic.config({
-	virtual_text = {
-		prefix = "●",
-		format = function(diagnostic)
-			if #diagnostic.message > 50 then
-				return string.sub(diagnostic.message, 1, 50) .. "..."
-			end
-			return diagnostic.message
-		end,
-	},
+    virtual_text = {
+        prefix = "●",
+        format = function(diagnostic)
+            if #diagnostic.message > 50 then
+                return string.sub(diagnostic.message, 1, 50) .. "..."
+            end
+            return diagnostic.message
+        end,
+    },
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "go",
-	group = indent_group,
-	callback = function()
-		vim.opt_local.expandtab = false -- Use real tabs
-		vim.opt_local.tabstop = 4 -- Visual width of tab
-		vim.opt_local.shiftwidth = 4 -- Indent width
-	end,
+
+-- autocomplete on the cmd bar
+vim.opt.wildmode = "noselect"
+vim.api.nvim_create_autocmd("CmdlineChanged", {
+    pattern = { ":", "/", "?" },
+    callback = function()
+        vim.fn.wildtrigger()
+    end
 })
