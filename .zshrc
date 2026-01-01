@@ -12,6 +12,10 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 PATH="$PATH:/home/miners/.local/bin"
 
 # BOB
@@ -61,6 +65,9 @@ alias ph="tmux new -s 67"
 
 # use emacs binds - the horrors
 bindkey -e
+
+#bindings
+bindkey ' ' magic-space
 bindkey '^n' history-search-forward
 bindkey '^p' history-search-backward
 

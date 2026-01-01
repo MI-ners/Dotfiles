@@ -7,9 +7,9 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		go = { "gofumpt" },
-		html = { "prettier" },
-		css = { "prettier" },
-		markdown = { "prettier" },
+		html = { "prettier", "prettierd", stop_after_first = true },
+		css = { "prettier", "prettierd", stop_after_first = true },
+		markdown = { "prettier", "prettierd", stop_after_first = true },
 	},
 	format_on_save = {
 		timeout_ms = 500,

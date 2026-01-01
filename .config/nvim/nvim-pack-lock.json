@@ -26,7 +26,8 @@
     },
     "harpoon": {
       "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
-      "src": "https://github.com/ThePrimeagen/harpoon"
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
     },
     "live-preview.nvim": {
       "rev": "04c2cc92476d7b3882a0c7155bb13c4d7ee4bfbf",

@@ -30,32 +30,5 @@ vim.keymap.set("n", "<leader>wp", ":LivePreview start<CR>", { desc = "Preview Cu
 vim.keymap.set("n", "<leader>ff", ":Pick files<CR>", { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fh", ":Pick help<CR>", { desc = "Find Help" })
 
--- buffer navigation aka native harpoon
--- changing marks nav
-vim.keymap.set("n", "<leader>1", "'A", { desc = "Jump to Mark A" })
-vim.keymap.set("n", "<leader>2", "'B", { desc = "Jump to Mark B" })
-vim.keymap.set("n", "<leader>3", "'C", { desc = "Jump to Mark C" })
-vim.keymap.set("n", "<leader>4", "'D", { desc = "Jump to Mark D" })
-
--- marking files
-vim.keymap.set("n", "<leader>a", "mA", { desc = "Set Mark A (Slot 1)" })
-vim.keymap.set("n", "<leader>s", "mB", { desc = "Set Mark B (Slot 2)" })
-vim.keymap.set("n", "<leader>d", "mC", { desc = "Set Mark C (Slot 3)" })
-vim.keymap.set("n", "<leader>g", "mD", { desc = "Set Mark C (Slot 4)" })
-
--- opens mini.pick for buffers
-vim.keymap.set("n", "<leader><space>", function()
-	require("mini.pick").builtin.buffers({
-		tool = "git",
-		include_current = false,
-	})
-end, { desc = "Switch Buffer" })
-
--- deletes all current marks
-vim.keymap.set("n", "<leader>X", function()
-	vim.cmd("delmarks A-Z")
-	print("Marks cleared (All Global Marks A-Z deleted).")
-end, { desc = "Clear All Global Marks" })
-
 --code_action
 vim.keymap.set({ "n", "v" }, "gra", vim.lsp.buf.code_action, { desc = "Code actions" })

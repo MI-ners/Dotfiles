@@ -8,53 +8,53 @@
 @define-color red #ff7eb6;
 
 * {
-    font-family: "Iosevka", heavy;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 0;
-    min-height: 0;
+  font-family: "LigaSFMonoNerdFont", heavy;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
 }
 
 window#waybar {
-    background-color: @bg;
-    color: @fg;
-    border-bottom: 1px solid @dim;
+  background-color: @bg;
+  color: @fg;
+  border-bottom: 1px solid @dim;
 }
 
 #workspaces {
-    background-color: @bg;
-    margin: 0 4px;
+  background-color: @bg;
+  margin: 0 4px;
 }
 
 #workspaces button {
-    padding: 0 10px;
-    color: @pink;
-    background: transparent;
-    transition: all 0.3s ease;
+  padding: 0 10px;
+  color: @pink;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 #workspaces button.empty {
-    color: @grey;
+  color: @grey;
 }
 
 #workspaces button.active {
-    color: @pink;
-    background-color: @dim;
-    border-radius: 4px;
+  color: @pink;
+  background-color: @dim;
+  border-radius: 4px;
 }
 
 #workspaces button.urgent {
-    color: @bg;
-    background-color: @red;
-    border-radius: 4px;
+  color: @bg;
+  background-color: @red;
+  border-radius: 4px;
 }
 
 #workspaces button:hover {
-    background: @dim;
-    color: @fg;
-    box-shadow: none;
-    /* Removed the white shadow */
+  background: @dim;
+  color: @fg;
+  box-shadow: none;
+  /* Removed the white shadow */
 }
 
 #idle_inhibitor,
@@ -67,61 +67,61 @@ window#waybar {
 #disk,
 #network,
 #tray {
-    padding: 0 10px;
-    background-color: @bg;
-    color: @fg;
+  padding: 0 10px;
+  background-color: @bg;
+  color: @fg;
 }
 
 #cpu,
 #memory,
 #disk {
-    color: @grey;
+  color: @grey;
 }
 
 #clock {
-    color: @teal;
-    font-weight: 800;
+  color: @teal;
+  font-weight: 800;
 }
 
 #network {
-    color: @purple;
+  color: @purple;
 }
 
 #pulseaudio {
-    color: @purple;
+  color: @purple;
 }
 
 #battery {
-    color: @fg;
+  color: @fg;
 }
 
 #battery.charging {
-    color: @teal;
+  color: @teal;
 }
 
 #battery.critical:not(.charging) {
-    color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #tray {
-    background-color: @bg;
-    /* Removed the purple box */
+  background-color: @bg;
+  /* Removed the purple box */
 }
 
 #custom-sep {
-    color: @dim;
-    padding: 0 5px;
+  color: @dim;
+  padding: 0 5px;
 }
 
 #custom-gentoo {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 20px;
-    color: #be95ff;
-    /* Oxocarbon Lavender */
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  color: #be95ff;
+  /* Oxocarbon Lavender */
 }

@@ -60,9 +60,7 @@ vim.lsp.config("marksman", {
 })
 
 -- htmx lsp
-vim.lsp.config("htmx", {
-	filetypes = { "html", "templ" },
-})
+vim.lsp.config("htmx", {})
 
 -- css lsp
 vim.lsp.config("cssls", {})
