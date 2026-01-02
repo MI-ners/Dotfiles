@@ -119,6 +119,10 @@
       "rev": "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
+    "vim-rsi": {
+      "rev": "45540637ead22f011e8215f1c90142e49d946a54",
+      "src": "https://github.com/tpope/vim-rsi"
+    },
     "vim-test": {
       "rev": "aa619692ff48a3cf3e6bdb893765039488d4e5f3",
       "src": "https://github.com/vim-test/vim-test"

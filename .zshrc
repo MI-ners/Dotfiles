@@ -61,7 +61,8 @@ alias ls='eza -l'
 alias lsa='eza -a -l --no-symlinks'
 alias ..='cd ..'
 alias ff="fastfetch -c examples/13"
-alias ph="tmux new -s 67"
+alias notes='tmux a -t notes'
+alias deving='tmux a -t deving'
 
 # use emacs binds - the horrors
 bindkey -e

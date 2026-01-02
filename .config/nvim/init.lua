@@ -21,6 +21,9 @@ require("plugins.conform")
 require("plugins.harpoon")
 require("plugins.nvimLint")
 
+-- herecy
+require("plugins.rsi")
+
 -- statusline
 vim.api.nvim_set_hl(0, "StatusLine", { fg = "#dde1e6", bg = "#262626" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#525252", bg = "#161616" })
