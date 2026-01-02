@@ -110,7 +110,6 @@ window#waybar {
 
 #tray {
   background-color: @bg;
-  /* Removed the purple box */
 }
 
 #custom-sep {
@@ -123,5 +122,4 @@ window#waybar {
   padding-right: 15px;
   font-size: 20px;
   color: #be95ff;
-  /* Oxocarbon Lavender */
 }

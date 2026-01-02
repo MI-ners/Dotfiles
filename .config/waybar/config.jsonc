@@ -5,13 +5,13 @@
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window",
-        "idle_inhibitor"
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
+        "idle_inhibitor",
         "cpu",
         "memory",
         "disk",

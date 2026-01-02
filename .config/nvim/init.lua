@@ -19,6 +19,7 @@ require("plugins.vimTest")
 require("plugins.dashboard")
 require("plugins.conform")
 require("plugins.harpoon")
+require("plugins.nvimLint")
 
 -- statusline
 vim.api.nvim_set_hl(0, "StatusLine", { fg = "#dde1e6", bg = "#262626" })

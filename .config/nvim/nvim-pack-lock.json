@@ -82,6 +82,10 @@
       "rev": "e0c4a58ec8c3ca7c92d3ee4eb3bc1dd0f7be317e",
       "src": "https://github.com/brenoprata10/nvim-highlight-colors"
     },
+    "nvim-lint": {
+      "rev": "1f19dacd945a7b1a57f29f32b2d7168384df3d36",
+      "src": "https://github.com/mfussenegger/nvim-lint.git"
+    },
     "nvim-lspconfig": {
       "rev": "b3a31fd3b6702de9c71c27212ffacf0f54cc3b46",
       "src": "https://github.com/neovim/nvim-lspconfig"
