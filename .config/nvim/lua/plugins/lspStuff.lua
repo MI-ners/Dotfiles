@@ -17,7 +17,7 @@ require("mason").setup({
 
 --Mason lsp config
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "gopls", "marksman", "pyright", "clangd" },
+	ensure_installed = { "lua_ls", "gopls", "pyright", "clangd" },
 })
 
 --lua_ls conf
@@ -52,11 +52,6 @@ vim.lsp.config("gopls", {
 			staticcheck = true,
 		},
 	},
-})
-
--- markdown lsp
-vim.lsp.config("marksman", {
-	filetypes = { "markdown", "wiki" },
 })
 
 -- htmx lsp

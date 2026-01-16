@@ -32,11 +32,6 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH=$PATH:/home/miners/.spicetify
 export PATH=$PATH:$HOME/.spicetify
 
-# go 
-export GOPATH="$HOME/devel/env/go"
-# tiny go 
-export PATH=$PATH:/usr/local/tinygo/bin
-export PATH="$PATH:$GOPATH/bin"
 
 # doom
 export PATH="$HOME/.config/emacs/bin:$PATH"

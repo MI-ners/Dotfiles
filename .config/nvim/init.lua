@@ -14,14 +14,11 @@ require("plugins.nvimCmp")
 require("plugins.tmuxNav")
 require("plugins.whichkey")
 require("plugins.oil")
-require("plugins.vimWiki")
 require("plugins.vimTest")
 require("plugins.dashboard")
 require("plugins.conform")
 require("plugins.harpoon")
 require("plugins.nvimLint")
-
--- herecy
 require("plugins.rsi")
 
 -- statusline

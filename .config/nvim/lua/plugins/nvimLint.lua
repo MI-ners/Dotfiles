@@ -8,7 +8,6 @@ require("lint").linters_by_ft = {
 	html = { "htmlhint" },
 	python = { "pylint" },
 	cpp = { "cpplint" },
-	markdown = { "markdownlint" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {

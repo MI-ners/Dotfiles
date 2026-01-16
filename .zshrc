@@ -12,11 +12,15 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
+export EDITOR="nvim"
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 PATH="$PATH:/home/miners/.local/bin"
+
+# emacs
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # BOB
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -24,11 +28,12 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 . "/home/miners/.local/share/bob/env/env.sh"
 . "/home/miners/.local/share/bob/env/env.sh"
 
+export GOPATH="$(go env GOPATH)"
+export PATH="${PATH}:${GOPATH}/bin"
+
 export PATH=$PATH:/home/miners/.spicetify
 export PATH=$PATH:$HOME/.spicetify
 
-# go
-export GOPATH="$HOME/devel/env/go"
 
 # yazi
 function y() {
@@ -61,9 +66,7 @@ alias ls='eza -l'
 alias lsa='eza -a -l --no-symlinks'
 alias ..='cd ..'
 alias ff="fastfetch -c examples/13"
-alias notes='tmux a -t notes'
-alias deving='tmux a -t deving'
-
+alias c='clear'
 # use emacs binds - the horrors
 bindkey -e
 
@@ -88,5 +91,4 @@ zstyle ':completions:*' matcher-list 'm:{a-z}={A-Za-z}'
 zinit cdreplay -q
 zinit light zsh-users/zsh-autosuggestions
     
-
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/conf.toml)"
