@@ -8,32 +8,14 @@
     "modules-center": [
         "mpd"
     ],
-    // "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "tray"],
     "modules-right": [
+    "idle_inhibitor",
         "pulseaudio",
         "network",
         "battery",
         "clock",
         "tray"
     ],
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //      "disable-scroll": true,
-    //      "all-outputs": true,
-    //      "format": "{name}: {icon}",
-    //      "format-icons": {
-    //          "1": "",
-    //          "2": "",
-    //          "3": "",
-    //          "4": "",
-    //          "5": "",
-    //          "8": "Ⅷ.",
-    //          "9": "Ⅸ.",
-    //          "urgent": "",
-    //          "focused": "",
-    //          "default": ""
-    //      }
-    //  },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
