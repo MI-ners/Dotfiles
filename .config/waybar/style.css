@@ -1,125 +1,182 @@
-@define-color bg #161616;
-@define-color fg #dde1e6;
-@define-color grey #525252;
-@define-color dim #262626;
-@define-color pink #ee5396;
-@define-color purple #be95ff;
-@define-color teal #3ddbd9;
-@define-color red #ff7eb6;
-
 * {
-  font-family: "LigaSFMonoNerdFont", heavy;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  border-radius: 0;
-  min-height: 0;
+  font-size: 18px;
+  font-family: "Iosevka";
+  font-weight: 400;
 }
 
 window#waybar {
-  background-color: @bg;
-  color: @fg;
-  border-bottom: 1px solid @dim;
+  background: #22262b; /* Solid slate background */
+  color: #e0dcd4; /* Parchment text */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0px;
+  border: 1px solid #22262b; /* Subtle border */
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  background: #282c34; /* Base3 on hover */
+  box-shadow: inset 0 -3px #b4bec8; /* Steel-blue underline */
 }
 
 #workspaces {
-  background-color: @bg;
-  margin: 0 4px;
+  background: transparent; /* No island - flows with bar */
+  border-radius: 0;
+  margin: 5px 5px 5px 10px;
+  padding: 0 5px;
 }
 
 #workspaces button {
-  padding: 0 10px;
-  color: @pink;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-#workspaces button.empty {
-  color: @grey;
-}
-
-#workspaces button.active {
-  color: @pink;
-  background-color: @dim;
-  border-radius: 4px;
-}
-
-#workspaces button.urgent {
-  color: @bg;
-  background-color: @red;
-  border-radius: 4px;
+  padding: 0 5px;
+  background-color: transparent;
+  color: #c0bdb8; /* Muted foreground */
+  min-width: 30px;
+  transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  background: @dim;
-  color: @fg;
-  box-shadow: none;
-  /* Removed the white shadow */
+  background: #282c34; /* Subtle highlight */
+  color: #e0dcd4;
 }
 
-#idle_inhibitor,
-#power-profiles-daemon,
-#pulseaudio,
+#workspaces button.active {
+  background: #282c34; /* Active background */
+  box-shadow: inset 0 -3px #ccc4b0; /* Wheat-gold underline */
+  color: #ccc4b0; /* Wheat-gold active color */
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background-color: #c8beb8; /* Ash-rose */
+  color: #1a1d21;
+}
+
+.modules-right {
+  background: transparent; /* No island - unified with bar */
+  border-radius: 0;
+  margin: 5px 10px 5px 5px;
+  padding: 0 5px;
+}
+
+#mode {
+  background-color: #3d424a; /* Base4 */
+  border-bottom: 3px solid #b4bec8; /* Steel-blue */
+  padding: 0 10px;
+}
+
+/* All modules flow together seamlessly */
 #clock,
 #battery,
 #cpu,
 #memory,
 #disk,
+#temperature,
+#backlight,
 #network,
-#tray {
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
   padding: 0 10px;
-  background-color: @bg;
-  color: @fg;
+  color: #e0dcd4; /* Parchment */
+  background: transparent;
+  margin: 0;
+  /* border-left: 1px solid #282c34; /\* Subtle separator *\/ */
 }
 
-#cpu,
-#memory,
-#disk {
-  color: @grey;
+/* First module has no left border */
+.modules-right > widget:first-child > * {
+  border-left: none;
 }
 
-#clock {
-  color: @teal;
-  font-weight: 800;
+/* Hover effect across all modules */
+#clock:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#tray:hover,
+#cpu:hover,
+#memory:hover {
+  background: #282c34; /* Base3 highlight */
+  color: #e0dcd4;
 }
 
-#network {
-  color: @purple;
+#window,
+#workspaces {
+  margin: 0 4px;
 }
 
-#pulseaudio {
-  color: @purple;
-}
-
-#battery {
-  color: @fg;
-}
-
+/* Module-specific semantic colors */
 #battery.charging {
-  color: @teal;
+  color: #b4beb4; /* Sage green */
+}
+
+#battery.warning:not(.charging) {
+  color: #ccc4b0; /* Wheat-gold */
 }
 
 #battery.critical:not(.charging) {
-  color: @red;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  color: #c8beb8; /* Ash-rose */
+}
+
+#network.disconnected {
+  color: #c8beb8; /* Ash-rose */
+}
+
+#temperature.critical {
+  color: #c8beb8; /* Ash-rose */
 }
 
 #tray {
-  background-color: @bg;
+  background: transparent;
+  border-left: none; /* No separator before tray */
 }
 
-#custom-sep {
-  color: @dim;
-  padding: 0 5px;
+#tray > .passive {
+  -gtk-icon-effect: dim;
 }
 
-#custom-gentoo {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 20px;
-  color: #be95ff;
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #c8beb8; /* Ash-rose */
+}
+
+#idle_inhibitor {
+  color: #c0bdb8; /* Muted */
+}
+
+#idle_inhibitor.activated {
+  color: #ccc4b0; /* Wheat-gold */
+}
+
+#mpd {
+  color: #e0dcd4; /* Parchment */
+}
+
+#mpd.disconnected {
+  color: #c8beb8; /* Ash-rose */
+}
+
+#mpd.stopped {
+  color: #676d77; /* Base6 - dimmed */
+}
+
+#mpd.paused {
+  color: #b4bec8; /* Steel-blue */
+}
+
+#pulseaudio.muted {
+  color: #676d77; /* Base6 - dimmed */
 }
