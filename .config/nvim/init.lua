@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 --Vim stuff
 require("vimOpts")
 require("vimbinds")
-
 --Plugins
 require("plugins.lspStuff")
 require("plugins.treesitter")
