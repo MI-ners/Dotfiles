@@ -9,7 +9,9 @@
         "mpd"
     ],
     "modules-right": [
-    "idle_inhibitor",
+       "idle_inhibitor",
+        "cpu",
+        "memory",
         "pulseaudio",
         "network",
         "battery",
@@ -170,8 +172,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}   {volume}% ",
-        "format-bluetooth": "{icon}   {volume}%  ",
+        "format": "{volume}% ",
+        "format-bluetooth": "{volume}% ",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",

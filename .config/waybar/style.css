@@ -121,14 +121,17 @@ button:hover {
 /* Module-specific semantic colors */
 #battery.charging {
   color: #b4beb4; /* Sage green */
+  font-size: 30px;
 }
 
 #battery.warning:not(.charging) {
   color: #ccc4b0; /* Wheat-gold */
+  font-size: 30px;
 }
 
 #battery.critical:not(.charging) {
   color: #c8beb8; /* Ash-rose */
+  font-size: 30px;
 }
 
 #network.disconnected {
@@ -155,6 +158,7 @@ button:hover {
 
 #idle_inhibitor {
   color: #c0bdb8; /* Muted */
+  font-size: 30px;
 }
 
 #idle_inhibitor.activated {
@@ -179,4 +183,5 @@ button:hover {
 
 #pulseaudio.muted {
   color: #676d77; /* Base6 - dimmed */
+  font-size: 30px;
 }
