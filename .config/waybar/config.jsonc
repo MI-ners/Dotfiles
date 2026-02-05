@@ -9,13 +9,15 @@
         "mpd"
     ],
     "modules-right": [
-       "idle_inhibitor",
+        "idle_inhibitor",
         "cpu",
         "memory",
         "pulseaudio",
         "network",
         "battery",
         "clock",
+        "power-profiles-daemon"
+
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -145,7 +147,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -198,5 +200,16 @@
         "escape": true,
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+"power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "",
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+}
 }

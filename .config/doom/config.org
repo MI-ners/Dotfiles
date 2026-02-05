@@ -6,6 +6,7 @@
 - [[#custom-keybindings][Custom Keybindings]]
 - [[#coding-specific-settings][Coding Specific Settings]]
 - [[#dashboard][Dashboard]]
+- [[#lsp][LSP]]
 - [[#org-stuff][Org stuff]]
   - [[#org-superstar][Org-Superstar]]
   - [[#org-appear][Org-appear]]
@@ -45,6 +46,19 @@ Tell go files to indent properly unsure if its just go or others but i only code
       +doom-dashboard-banner-file "gnu_color.svg")
 (remove-hook! '+doom-dashboard-functions #'doom-dashboard-widget-footer)
 (remove-hook! '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
+#+end_src
+
+
+* LSP
+cmake lsp
+#+begin_src emacs-lisp
+(use-package cmake-ts-mode
+  :config
+  (add-hook 'cmake-ts-mode-hook
+    (defun setup-neocmakelsp ()
+      (require 'eglot)
+      (add-to-list 'eglot-server-programs `((cmake-ts-mode) . ("neocmakelsp" "stdio")))
+      (eglot-ensure))))
 #+end_src
 
 

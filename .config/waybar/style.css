@@ -121,7 +121,7 @@ button:hover {
 /* Module-specific semantic colors */
 #battery.charging {
   color: #b4beb4; /* Sage green */
-  font-size: 30px;
+  font-size: 22px;
 }
 
 #battery.warning:not(.charging) {

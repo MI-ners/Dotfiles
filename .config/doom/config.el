@@ -14,6 +14,14 @@
 (remove-hook! '+doom-dashboard-functions #'doom-dashboard-widget-footer)
 (remove-hook! '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
 
+(use-package cmake-ts-mode
+  :config
+  (add-hook 'cmake-ts-mode-hook
+    (defun setup-neocmakelsp ()
+      (require 'eglot)
+      (add-to-list 'eglot-server-programs `((cmake-ts-mode) . ("neocmakelsp" "stdio")))
+      (eglot-ensure))))
+
 (setq org-directory "~/org/")
 
 
