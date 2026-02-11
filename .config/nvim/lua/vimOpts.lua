@@ -20,6 +20,7 @@ vim.o.incsearch = true
 vim.o.undofile = true
 vim.o.winborder = "double"
 
+
 -- Vim diagnosis
 vim.diagnostic.config({
 	virtual_text = {

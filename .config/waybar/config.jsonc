@@ -17,7 +17,6 @@
         "battery",
         "clock",
         "power-profiles-daemon"
-
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,

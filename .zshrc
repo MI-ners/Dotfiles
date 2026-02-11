@@ -91,4 +91,37 @@ zstyle ':completions:*' matcher-list 'm:{a-z}={A-Za-z}'
 zinit cdreplay -q
 zinit light zsh-users/zsh-autosuggestions
     
+export PATH="/usr/lib/llvm/21/bin:$PATH"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/conf.toml)"
+
+# custom commands
+# for kernel/compilers // cachyos-sources is too bleeding edge for some programs
+lock() {
+    # Usage: lock sys-kernel/cachyos-sources-6.18.9
+    local pkg=$1
+    echo ">$pkg" | sudo tee -a /etc/portage/package.mask/manual_locks
+    echo "Locked: $pkg (Nothing newer will install)"
+}
+
+unlock() {
+    # Usage: unlock sys-kernel/cachyos-sources
+    local pkg=$1
+    sudo sed -i "/$pkg/d" /etc/portage/package.mask/manual_locks
+    echo "Unlocked: $pkg"
+}
+
+sysup() {
+    echo "Syncing Gentoo Repositories..."
+    sudo emerge --sync
+
+    echo "Starting System Update..."
+    sudo emerge -avuND @world "$@"
+
+    echo ""
+    echo "---------------------------------------"
+    echo "CHECKING KERNEL STATUS (Look for Red/Masked versions):"
+    eix cachyos-sources
+    echo "----------------------------------------"
+    echo "Dont forget to run sudo emerge -av --depclean"
+}
+
