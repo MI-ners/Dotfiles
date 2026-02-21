@@ -22,6 +22,10 @@
       (add-to-list 'eglot-server-programs `((cmake-ts-mode) . ("neocmakelsp" "stdio")))
       (eglot-ensure))))
 
+(after! rust-ts-mode
+  (set-company-backend! 'rust-ts-mode
+    'company-capf))
+
 (setq org-directory "~/org/")
 
 

@@ -60,6 +60,13 @@ cmake lsp
       (add-to-list 'eglot-server-programs `((cmake-ts-mode) . ("neocmakelsp" "stdio")))
       (eglot-ensure))))
 #+end_src
+#+begin_src emacs-lisp
+(after! rust-ts-mode
+  (set-company-backend! 'rust-ts-mode
+    'company-capf))
+#+end_src
+
+#+RESULTS:
 
 
 * Org stuff

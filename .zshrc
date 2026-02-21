@@ -124,4 +124,3 @@ sysup() {
     echo "----------------------------------------"
     echo "Dont forget to run sudo emerge -av --depclean"
 }
-
