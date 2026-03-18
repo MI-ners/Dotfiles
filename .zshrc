@@ -65,7 +65,6 @@ alias shutdown='sudo shutdown now'
 alias ls='eza -l'
 alias lsa='eza -a -l --no-symlinks'
 alias ..='cd ..'
-alias ff="fastfetch -c examples/13"
 alias c='clear'
 # use emacs binds - the horrors
 bindkey -e
