@@ -1,34 +1,44 @@
 # ~/.config/starship.toml
 
-# Disable the empty line between prompts to keep the terminal compact
 add_newline = false
 
-# This defines the exact layout.
-# We use \\[ and \\] to tell Starship to print literal brackets instead of trying to format them.
-format = "\\[ ? // $directory\\]$character"
+# UPDATED: Added git_branch and git_status inside the brackets
+format = "\\[ ? // $directory$git_branch$git_status\\]$character"
 
 [directory]
-# Strip out the default "in " text and folder icon
 format = "[$path]($style)"
-# Match the flat, unstyled text from the screenshot
 style = "white"
-# How many directories to show before shortening (e.g., ~/foo/bar/baz)
 truncation_length = 3
 truncate_to_repo = false
 
 [character]
-# The literal dollar sign.
 success_symbol = "[\\$](white) "
-# Turns the dollar sign red if your last command failed (a nice hidden feature)
 error_symbol = "[\\$](bold red) "
 
-# Disable everything else so no random modules pop up
+# ==========================================
+# GIT CONFIGURATION
+# ==========================================
 [git_branch]
-disabled = true
+disabled = false
+# Adds a clean pipe separator before the branch name
+format = " | [$branch]($style)"
+style = "bold white"
 
 [git_status]
-disabled = true
+disabled = false
+# Keeps the status symbols tucked cleanly next to the branch
+format = " [$all_status$ahead_behind]($style)"
+style = "white"
+# Stripping out emojis for raw ASCII
+modified = "*"
+staged = "+"
+untracked = "?"
+deleted = "x"
+ahead = ">"
+behind = "<"
+diverged = "<>"
 
+# Keep these disabled
 [package]
 disabled = true
 
