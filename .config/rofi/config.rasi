@@ -3,20 +3,21 @@ configuration {
     show-icons: false;
     display-drun: "APPS";
     display-run: "RUN";
-    display-window: "WINDOW";
+    display-window: "WIN";
     drun-display-format: "{name}";
     window-format: "{w} · {c} · {t}";
     font: "GeistMono Nerd Font Bold 12";
 }
 
 * {
-    bg-col: #161616;
-    bg-col-light: #161616;
-    border-col: #262626;
-    selected-col: #262626;
-    fg-col: #dde1e6;
-    fg-col2: #ee5396;
-    grey: #525252;
+    /* Modus Vivendi Color Palette */
+    bg-col: #000000;
+    bg-col-light: #000000;
+    border-col: #595959;       /* Modus Bright Black */
+    selected-col: #00d3d0;     /* Modus Cyan */
+    fg-col: #ffffff;           /* Pure White */
+    fg-col2: #000000;          /* Pure Black (for inverted text) */
+    grey: #595959;
     width: 600;
 }
 
@@ -27,9 +28,10 @@ element-text, element-icon, mode-switcher {
 
 window {
     height: 360px;
-    border: 2px;
+    border: 2px solid;
     border-color: @border-col;
     background-color: @bg-col;
+    border-radius: 0px; /* Aggressively sharp corners */
 }
 
 mainbox {
@@ -39,14 +41,19 @@ mainbox {
 inputbar {
     children: [prompt,entry];
     background-color: transparent;
-    padding: 2px;
+    padding: 0px;
+    margin: 20px 20px 10px 20px;
+    /* A sharp underline separating the search from the list */
+    border: 0px 0px 1px 0px;
+    border-color: @border-col;
 }
 
 prompt {
+    /* Solid cyan block with black text */
     background-color: @selected-col;
-    padding: 6px;
+    padding: 8px 12px;
     text-color: @fg-col2;
-    margin: 20px 0px 0px 20px;
+    margin: 0px;
 }
 
 textbox-prompt-colon {
@@ -55,8 +62,8 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
+    padding: 8px;
+    margin: 0px 0px 0px 10px;
     text-color: @fg-col;
     background-color: transparent;
     placeholder: "Search...";
@@ -64,16 +71,16 @@ entry {
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    border: 0px;
+    padding: 0px;
+    margin: 10px 20px 20px 20px;
     columns: 1;
     lines: 10;
     background-color: transparent;
 }
 
 element {
-    padding: 8px;
+    padding: 8px 12px;
     background-color: transparent;
     text-color: @fg-col;
 }
@@ -83,6 +90,7 @@ element-icon {
 }
 
 element selected {
+    /* The inverted terminal cursor highlight */
     background-color: @selected-col;
     text-color: @fg-col2;
 }
@@ -93,15 +101,17 @@ mode-switcher {
 
 button {
     padding: 10px;
-    background-color: @bg-col-light;
+    background-color: @bg-col;
     text-color: @grey;
-    vertical-align: 0.5; 
+    vertical-align: 0.5;
     horizontal-align: 0.5;
+    border: 1px 0px 0px 0px;
+    border-color: @border-col;
 }
 
 button selected {
     background-color: @bg-col;
-    text-color: @fg-col2;
+    text-color: @selected-col;
 }
 
 message {

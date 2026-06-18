@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 require("vimOpts")
 require("vimbinds")
 --Plugins
+require("plugins.theme")
 require("plugins.lspStuff")
 require("plugins.treesitter")
 require("plugins.mini")
@@ -18,7 +19,6 @@ require("plugins.conform")
 require("plugins.harpoon")
 require("plugins.nvimLint")
 require("plugins.rsi")
-vim.cmd("colorscheme habamax")
 
 -- statusline
 vim.api.nvim_set_hl(0, "StatusLine", { fg = "#dde1e6", bg = "#262626" })

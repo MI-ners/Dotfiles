@@ -2,34 +2,35 @@
 
 add_newline = false
 
-# UPDATED: Added git_branch and git_status inside the brackets
-format = "\\[ ? // $directory$git_branch$git_status\\]$character"
+# We wrap the brackets in white, make the "? //" Modus Cyan, and let the modules handle the rest
+format = "\\[ [? //](#00d3d0) $directory$git_branch$git_status \\] $character"
 
 [directory]
 format = "[$path]($style)"
-style = "white"
+# Modus Vivendi Blue (matches your strings)
+style = "bold #2fafff"
 truncation_length = 3
 truncate_to_repo = false
 
 [character]
-success_symbol = "[\\$](white) "
-error_symbol = "[\\$](bold red) "
+success_symbol = "[\\$](bold white) "
+# Modus Vivendi Red for failed commands
+error_symbol = "[\\$](bold #ff5f59) "
 
 # ==========================================
 # GIT CONFIGURATION
 # ==========================================
 [git_branch]
 disabled = false
-# Adds a clean pipe separator before the branch name
 format = " | [$branch]($style)"
-style = "bold white"
+# Modus Vivendi Magenta (matches your function names)
+style = "bold #f78fe7"
 
 [git_status]
 disabled = false
-# Keeps the status symbols tucked cleanly next to the branch
 format = " [$all_status$ahead_behind]($style)"
-style = "white"
-# Stripping out emojis for raw ASCII
+# Modus Vivendi Green
+style = "bold #44bc44"
 modified = "*"
 staged = "+"
 untracked = "?"
@@ -38,7 +39,7 @@ ahead = ">"
 behind = "<"
 diverged = "<>"
 
-# Keep these disabled
+# Disable the fluff
 [package]
 disabled = true
 
